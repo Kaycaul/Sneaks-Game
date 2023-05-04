@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4103431461138722961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4103431461138722967}
+  - component: {fileID: 4103431461138722960}
+  m_Layer: 0
+  m_Name: TextSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4103431461138722967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103431461138722961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4103431461138722960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103431461138722961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbb1d6660d47e54ca78d205808eba02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
+  textBoxDatas:
+  - iconSprite: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
+    message: I AM THE MOTORCYCLE
+    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+    delayBetweenLetters: 0.05
+  - iconSprite: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
+    message: hi
+    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+    delayBetweenLetters: 0.05
+  - iconSprite: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
+    message: 'HOOONK
+
+      honk honk
+
+      HOOOOOOOOOOONK'
+    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+    delayBetweenLetters: 0.05
+  - iconSprite: {fileID: 21300000, guid: 483c86c89b01f404fb1acc159510a39a, type: 3}
+    message: im doeball
+    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+    delayBetweenLetters: 0.05
+  - iconSprite: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
+    message: what in tarnation
+    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+    delayBetweenLetters: 0.05

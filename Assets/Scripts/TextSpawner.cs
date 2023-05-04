@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// call the public methods from another script to display the messages
 public class TextSpawner : MonoBehaviour {
 
     [SerializeField]
@@ -9,18 +8,15 @@ public class TextSpawner : MonoBehaviour {
     [SerializeField]
     TextBoxData[] textBoxDatas;
 
-    int currentTextBoxIdx;
+    int currentTextBoxIdx = 0;
     TextBox currentTextBox;
-    
-    void Start() {
-        NextTextBox();
-    }
 
-    void Update() {
-        // next text box when space pressed 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            NextTextBox();
-        }
+    public bool finished { get; private set; } = false;
+
+    public void StartText() {
+        finished = false;
+        currentTextBoxIdx = 0;
+        NextTextBox();
     }
 
     public void NextTextBox() {
@@ -33,12 +29,21 @@ public class TextSpawner : MonoBehaviour {
             currentTextBox = Instantiate(textBoxPrefab, transform).GetComponent<TextBox>();
             // update the new one with current values
             currentTextBox.SetData(textBoxDatas[currentTextBoxIdx++]);
+        } else {
+            finished = true;
         }
+    }
+
+    public void Stop() {
+        GameObject.Destroy(currentTextBox.gameObject);
+        currentTextBox = null;
+        currentTextBoxIdx = 0;
     }
 
     [System.Serializable]
     public class TextBoxData {
         public Sprite iconSprite;
+        [TextArea]
         public string message;
         public AudioClip voiceClip;
         public float delayBetweenLetters;

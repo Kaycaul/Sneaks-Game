@@ -395,7 +395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.9928, y: -0.95999146}
+  m_AnchoredPosition: {x: 143.9928, y: -6}
   m_SizeDelta: {x: 921.9856, y: 264.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2613522413891877317
@@ -429,8 +429,8 @@ MonoBehaviour:
   m_text: wordwsjnk dsjkdhgj jshdf gjkkjhfd k dsfgjk hd dshkjsdkd sknsdjkbv sdnghjjks
     hsjkfldh WAAAAAAAA wa wa BOING BOING BOING DING
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 628ed88994ad24f448c68bff7223a585, type: 2}
+  m_sharedMaterial: {fileID: 2063212916555729737, guid: 628ed88994ad24f448c68bff7223a585, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -454,8 +454,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.34
-  m_fontSizeBase: 57.34
+  m_fontSize: 40.94
+  m_fontSizeBase: 40.94
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 36.1
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

@@ -207,7 +207,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1154863562
+--- !u!1 &925988238
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,61 +215,209 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1154863564}
-  - component: {fileID: 1154863563}
+  - component: {fileID: 925988240}
+  - component: {fileID: 925988239}
+  - component: {fileID: 925988242}
+  - component: {fileID: 925988241}
   m_Layer: 0
-  m_Name: TextSpawner
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1154863563
-MonoBehaviour:
+--- !u!212 &925988239
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154863562}
+  m_GameObject: {fileID: 925988238}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbbb1d6660d47e54ca78d205808eba02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
-  textBoxDatas:
-  - iconSprite: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
-    message: I AM THE MOTORCYCLE
-    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
-    delayBetweenLetters: 0.05
-  - iconSprite: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
-    message: hi
-    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
-    delayBetweenLetters: 0.05
-  - iconSprite: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
-    message: HOOONK HONK HONK
-    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
-    delayBetweenLetters: 0.05
-  - iconSprite: {fileID: 21300000, guid: 483c86c89b01f404fb1acc159510a39a, type: 3}
-    message: im doeball
-    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
-    delayBetweenLetters: 0.05
-  - iconSprite: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
-    message: what in tarnation
-    voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
-    delayBetweenLetters: 0.05
---- !u!4 &1154863564
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &925988240
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154863562}
+  m_GameObject: {fileID: 925988238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 633.574, y: 200.00288, z: -6.137176}
+  m_LocalPosition: {x: 0.022008717, y: -0.5662452, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1392865529}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925988241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925988238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fcd9bb0cee5c54481f1bfb72d3fe48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 48
+  drag: 6
+  dialogueOnSpace: {fileID: 1392865530}
+--- !u!50 &925988242
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925988238}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1001 &1392865528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 925988240}
+    m_Modifications:
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[0].message
+      value: 'i might look like the motorcycle
+
+        but i am not'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[1].message
+      value: 'you are now free
+
+        continue walking
+
+        (or dont)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722961, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_Name
+      value: TextSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+--- !u!4 &1392865529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+  m_PrefabInstance: {fileID: 1392865528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1392865530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+  m_PrefabInstance: {fileID: 1392865528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbb1d6660d47e54ca78d205808eba02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

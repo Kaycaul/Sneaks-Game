@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
 
 public class TextBox : MonoBehaviour {
 
@@ -35,13 +33,17 @@ public class TextBox : MonoBehaviour {
             char character = message[messageProgress++];
             textBox.text += character;
             // play a sound when a character other than a space is added
-            if (!character.Equals(' ')) {
+            if (!character.Equals(' ') && !character.Equals('\n')) {
                 voiceBeeper.PlayOneShot(voiceClip);
             }
             // set the finished flag and return if message is finished
             if (messageProgress == message.Length) {
                 finished = true;
                 yield break;
+            }
+            // double delay on newline characters
+            if (character.Equals('\n')) {
+                yield return new WaitForSeconds(delayBetweenLetters);
             }
             // wait a delay before adding the next letter
             yield return new WaitForSeconds(delayBetweenLetters);
