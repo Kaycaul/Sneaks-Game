@@ -18,6 +18,7 @@ public class PlayerMovementTest : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+        dialogueOnSpace.onFinished += DoneTalking;
     }
 
     // start or continue the text box on space
@@ -29,12 +30,11 @@ public class PlayerMovementTest : MonoBehaviour {
             } else {
                 dialogueOnSpace.NextTextBox();
             }
-            // then check if finished
-            if (dialogueOnSpace.finished) {
-                dialogueOnSpace.Stop();
-                talking = false;
-            }
         }
+    }
+
+    void DoneTalking() {
+        talking = false;
     }
 
     void FixedUpdate() {

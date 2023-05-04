@@ -3,6 +3,8 @@ using UnityEngine;
 // call the public methods from another script to display the messages
 public class TextSpawner : MonoBehaviour {
 
+    public event System.Action onFinished; // called when the last text box is cleared, and everything is reset.
+
     [SerializeField]
     GameObject textBoxPrefab;
     [SerializeField]
@@ -11,14 +13,18 @@ public class TextSpawner : MonoBehaviour {
     int currentTextBoxIdx = 0;
     TextBox currentTextBox;
 
-    public bool finished { get; private set; } = false;
-
+    /// <summary>
+    /// Restart the text boxes, and display the first one
+    /// </summary>
     public void StartText() {
-        finished = false;
         currentTextBoxIdx = 0;
         NextTextBox();
     }
 
+    /// <summary>
+    /// Display the next text box, or stop if there isnt one left.
+    /// Should be called when the player clicks as they read.
+    /// </summary>
     public void NextTextBox() {
         // return if current text box is not finished
         if (currentTextBox != null && !currentTextBox.finished) return;
@@ -30,14 +36,10 @@ public class TextSpawner : MonoBehaviour {
             // update the new one with current values
             currentTextBox.SetData(textBoxDatas[currentTextBoxIdx++]);
         } else {
-            finished = true;
+            GameObject.Destroy(currentTextBox.gameObject);
+            currentTextBox = null;
+            onFinished();
         }
-    }
-
-    public void Stop() {
-        GameObject.Destroy(currentTextBox.gameObject);
-        currentTextBox = null;
-        currentTextBoxIdx = 0;
     }
 
     [System.Serializable]
