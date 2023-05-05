@@ -38,7 +38,7 @@ public class TextSpawner : MonoBehaviour {
         } else {
             GameObject.Destroy(currentTextBox.gameObject);
             currentTextBox = null;
-            onFinished();
+            if (onFinished != null) onFinished();
         }
     }
 
