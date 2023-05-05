@@ -10,31 +10,13 @@ public class PlayerMovementTest : MonoBehaviour {
     [SerializeField]
     float drag = 6;
     [SerializeField]
-    TextSpawner dialogueOnSpace;
 
     Rigidbody2D rb;
-    bool talking = false;
+    public bool talking = false;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
-        dialogueOnSpace.onFinished += DoneTalking;
-    }
-
-    // start or continue the text box on space
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            if (!talking) {
-                dialogueOnSpace.StartText();
-                talking = true;
-            } else {
-                dialogueOnSpace.NextTextBox();
-            }
-        }
-    }
-
-    void DoneTalking() {
-        talking = false;
     }
 
     void FixedUpdate() {

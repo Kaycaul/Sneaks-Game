@@ -12,11 +12,18 @@ public class TextSpawner : MonoBehaviour {
 
     int currentTextBoxIdx = 0;
     TextBox currentTextBox;
+    bool started = false;
+
+    private void Update() {
+        // next on space pressed
+        if (Input.GetKeyDown(KeyCode.Space) && started) NextTextBox();
+    }
 
     /// <summary>
     /// Restart the text boxes, and display the first one
     /// </summary>
     public void StartText() {
+        started = true;
         currentTextBoxIdx = 0;
         NextTextBox();
     }
@@ -36,9 +43,10 @@ public class TextSpawner : MonoBehaviour {
             // update the new one with current values
             currentTextBox.SetData(textBoxDatas[currentTextBoxIdx++]);
         } else {
-            GameObject.Destroy(currentTextBox.gameObject);
+            if (currentTextBox != null) GameObject.Destroy(currentTextBox.gameObject);
             currentTextBox = null;
             if (onFinished != null) onFinished();
+            onFinished = null;
         }
     }
 

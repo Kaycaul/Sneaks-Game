@@ -57,6 +57,7 @@ public class QuestionBox : MonoBehaviour {
             // stop when the player makes a choice
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) {
                 if (OnChoiceSelected != null) OnChoiceSelected(currentChoice);
+                OnChoiceSelected = null;
                 finished = true;
             }
 
@@ -80,14 +81,13 @@ public class QuestionBox : MonoBehaviour {
         GameObject.Destroy(gameObject);
     }
 
+    [System.Serializable]
     public class QuestionBoxData {
         public string message;
         public string[] choices;
         public AudioClip voiceClip;
         public float delayBetweenLetters;
     }
-
-
 
     public void SetData(QuestionBoxData newData) {
         message = newData.message;
