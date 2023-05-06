@@ -11,6 +11,8 @@ public class TextBox : MonoBehaviour {
     TMP_Text textBox;
     [SerializeField]
     AudioSource voiceBeeper;
+    [SerializeField]
+    Image buttonPrompt;
 
     public Sprite iconSprite;
     public string message;
@@ -22,6 +24,7 @@ public class TextBox : MonoBehaviour {
     public bool finished {get; private set;} = false;
 
     private void Start() {
+        buttonPrompt.gameObject.SetActive(false);
         StartCoroutine(ShowText());
     }
 
@@ -38,6 +41,8 @@ public class TextBox : MonoBehaviour {
             }
             // set the finished flag and return if message is finished
             if (messageProgress == message.Length) {
+                // show the button prompt
+                buttonPrompt.gameObject.SetActive(true);
                 finished = true;
                 yield break;
             }
@@ -48,7 +53,6 @@ public class TextBox : MonoBehaviour {
             // wait a delay before adding the next letter
             yield return new WaitForSeconds(delayBetweenLetters);
         }
-
     }
 
     public void SetData(TextSpawner.TextBoxData newData) {
