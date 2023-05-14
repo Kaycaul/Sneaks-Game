@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &567376310
 PrefabInstance:
@@ -312,6 +312,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
   m_PrefabInstance: {fileID: 567376310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &657773296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657773297}
+  - component: {fileID: 657773299}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &657773297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657773296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.25162798, y: 0.10017307, z: -0.0726068}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657773299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657773296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e922eb68e53094c9da3f6832443af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925988238
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &925988241
 MonoBehaviour:
@@ -413,7 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 48
   drag: 6
-  rb: {fileID: 0}
+  mainMusic: {fileID: 8300000, guid: ca6565aa1ae86044b9f16fd56febb0ce, type: 3}
   talking: 0
 --- !u!50 &925988242
 Rigidbody2D:
@@ -729,7 +773,7 @@ Transform:
   - {fileID: 1472169937}
   - {fileID: 567376312}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1920341229
 BoxCollider2D:
@@ -766,13 +810,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1920341226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c4630849feeff4dbcb459016b8a8fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c56df32a2e8a3146a0530e49a605005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   intro: {fileID: 2122119473}
   question: {fileID: 1629395583}
   youExplode: {fileID: 1472169936}
   youSurvive: {fileID: 567376311}
+  talkingMusic: {fileID: 8300000, guid: ce751bfc0d3ea2c4694504844e221854, type: 3}
+  mainMusic: {fileID: 8300000, guid: ca6565aa1ae86044b9f16fd56febb0ce, type: 3}
 --- !u!50 &1920341231
 Rigidbody2D:
   serializedVersion: 4

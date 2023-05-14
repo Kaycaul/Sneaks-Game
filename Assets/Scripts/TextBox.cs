@@ -10,8 +10,6 @@ public class TextBox : MonoBehaviour {
     [SerializeField]
     TMP_Text textBox;
     [SerializeField]
-    AudioSource voiceBeeper;
-    [SerializeField]
     Image buttonPrompt;
 
     public Sprite iconSprite;
@@ -37,7 +35,7 @@ public class TextBox : MonoBehaviour {
             textBox.text += character;
             // play a sound when a character other than a space is added
             if (!character.Equals(' ') && !character.Equals('\n')) {
-                voiceBeeper.PlayOneShot(voiceClip);
+                AudioManager.PlaySound(voiceClip);
             }
             // set the finished flag and return if message is finished
             if (messageProgress == message.Length) {

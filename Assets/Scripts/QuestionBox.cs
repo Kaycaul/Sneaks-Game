@@ -7,10 +7,7 @@ public class QuestionBox : MonoBehaviour {
 
     public event System.Action<int> OnChoiceSelected;
 
-    [SerializeField]
-    TMP_Text textBox;
-    [SerializeField]
-    AudioSource voiceBeeper;
+    [SerializeField] TMP_Text textBox;
 
     public string[] choices;
     public string message;
@@ -38,7 +35,7 @@ public class QuestionBox : MonoBehaviour {
             textBox.text += character;
             // play a sound when a character other than a space is added
             if (!character.Equals(' ')) {
-                voiceBeeper.PlayOneShot(voiceClip);
+                AudioManager.PlaySound(voiceClip);
             }
             // set the finished flag and return if message is finished
             if (messageProgress == message.Length) {

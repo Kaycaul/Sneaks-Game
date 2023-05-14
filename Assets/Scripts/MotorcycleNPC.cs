@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class MotorcycleNPC : MonoBehaviour {
 
-    [SerializeField]
-    TextSpawner intro;
-    [SerializeField]
-    QuestionSpawner question;
-    [SerializeField]
-    TextSpawner youExplode;
-    [SerializeField]
-    TextSpawner youSurvive;
+    [SerializeField] TextSpawner intro;
+    [SerializeField] QuestionSpawner question;
+    [SerializeField] TextSpawner youExplode;
+    [SerializeField] TextSpawner youSurvive;
+    [SerializeField] AudioClip talkingMusic;
+    [SerializeField] AudioClip mainMusic;
 
     PlayerMovementTest player;
 
     // when the player enters this collider
     private void OnTriggerEnter2D(Collider2D other) {
+        AudioManager.PlayMusic(talkingMusic);
         player = other.GetComponent<PlayerMovementTest>();
         player.talking = true;
         intro.onFinished += AskQuestion;
@@ -42,5 +41,6 @@ public class MotorcycleNPC : MonoBehaviour {
 
     void Finish() {
         player.talking = false;
+        AudioManager.PlayMusic(mainMusic);
     }
 }

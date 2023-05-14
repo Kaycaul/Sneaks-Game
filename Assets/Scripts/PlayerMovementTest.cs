@@ -5,11 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovementTest : MonoBehaviour {
   
-    [SerializeField]
-    float speed = 48;
-    [SerializeField]
-    float drag = 6;
-    [SerializeField]
+    [SerializeField] float speed = 48;
+    [SerializeField] float drag = 6;
+    [SerializeField] AudioClip mainMusic;
 
     Rigidbody2D rb;
     public bool talking = false;
@@ -17,6 +15,7 @@ public class PlayerMovementTest : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+        AudioManager.PlayMusic(mainMusic);
     }
 
     void FixedUpdate() {
