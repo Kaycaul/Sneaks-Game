@@ -5,34 +5,37 @@ using TMPro;
 
 public class TextBox : MonoBehaviour {
 
-    [SerializeField]
-    Image icon;
-    [SerializeField]
-    TMP_Text textBox;
-    [SerializeField]
-    Image buttonPrompt;
+    [SerializeField] Image icon;
+    [SerializeField] TMP_Text textBox;
+    [SerializeField] TMP_Text bigTextBox;
+    [SerializeField] Image buttonPrompt;
 
-    public Sprite iconSprite;
-    public string message;
-    public AudioClip voiceClip;
-    public float delayBetweenLetters;
+    Sprite iconSprite;
+    AudioClip voiceClip;
+    TMP_Text textBoxToUse;
+    string message;
+    float delayBetweenLetters;
+    bool showIcon;
 
     // read only property for the finished flag
-    [HideInInspector]
-    public bool finished {get; private set;} = false;
+    [HideInInspector] public bool finished {get; private set;} = false;
 
     private void Start() {
         buttonPrompt.gameObject.SetActive(false);
+        icon.gameObject.SetActive(showIcon);
+        textBox.gameObject.SetActive(showIcon);
+        bigTextBox.gameObject.SetActive(!showIcon);
+        textBoxToUse = showIcon ? textBox : bigTextBox;
         StartCoroutine(ShowText());
     }
 
     IEnumerator ShowText() {
-        textBox.text = "";
+        textBoxToUse.text = "";
         int messageProgress = 0;
         while (messageProgress < message.Length) {
             // add the next letter to the text box
             char character = message[messageProgress++];
-            textBox.text += character;
+            textBoxToUse.text += character;
             // play a sound when a character other than a space is added
             if (!character.Equals(' ') && !character.Equals('\n')) {
                 AudioManager.PlaySound(voiceClip);
@@ -54,7 +57,8 @@ public class TextBox : MonoBehaviour {
     }
 
     public void SetData(TextSpawner.TextBoxData newData) {
-        icon.sprite = newData.iconSprite;
+        showIcon = newData.showIcon;
+        if (showIcon) icon.sprite = newData.iconSprite;
         message = newData.message;
         voiceClip = newData.voiceClip;
         delayBetweenLetters = newData.delayBetweenLetters;

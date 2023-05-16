@@ -3,16 +3,13 @@ using UnityEngine;
 // call the public methods from another script to display the messages
 public class TextSpawner : MonoBehaviour {
 
-    public event System.Action onFinished; // called when the last text box is cleared, and everything is reset.
-
-    [SerializeField]
-    GameObject textBoxPrefab;
-    [SerializeField]
-    TextBoxData[] textBoxDatas;
+    [SerializeField] GameObject textBoxPrefab;
+    [SerializeField] TextBoxData[] textBoxDatas;
 
     int currentTextBoxIdx = 0;
     TextBox currentTextBox;
     bool started = false;
+    public bool finished {get; private set;} = false;
 
     private void Update() {
         // next on space pressed
@@ -24,6 +21,7 @@ public class TextSpawner : MonoBehaviour {
     /// </summary>
     public void StartText() {
         started = true;
+        finished = false;
         currentTextBoxIdx = 0;
         NextTextBox();
     }
@@ -45,16 +43,15 @@ public class TextSpawner : MonoBehaviour {
         } else {
             if (currentTextBox != null) GameObject.Destroy(currentTextBox.gameObject);
             currentTextBox = null;
-            if (onFinished != null) onFinished();
-            onFinished = null;
+            finished = true;
         }
     }
 
     [System.Serializable]
     public class TextBoxData {
         public Sprite iconSprite;
-        [TextArea]
-        public string message;
+        public bool showIcon = true;
+        [TextArea] public string message;
         public AudioClip voiceClip;
         public float delayBetweenLetters;
     }

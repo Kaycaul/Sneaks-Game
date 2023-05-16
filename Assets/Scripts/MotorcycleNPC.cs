@@ -8,39 +8,25 @@ public class MotorcycleNPC : MonoBehaviour {
     [SerializeField] QuestionSpawner question;
     [SerializeField] TextSpawner youExplode;
     [SerializeField] TextSpawner youSurvive;
-    [SerializeField] AudioClip talkingMusic;
-    [SerializeField] AudioClip mainMusic;
 
     PlayerMovementTest player;
 
+    // redo all this without events theyre stupid
     // when the player enters this collider
     private void OnTriggerEnter2D(Collider2D other) {
-        AudioManager.PlayMusic(talkingMusic);
         player = other.GetComponent<PlayerMovementTest>();
         player.talking = true;
-        intro.onFinished += AskQuestion;
+        StartCoroutine(Conversation());
+    }
+
+    IEnumerator Conversation() {
         intro.StartText();
-    }
-
-    void AskQuestion() {
-        question.OnChoiceSelected += AfterQuestion;
-        question.SpawnQuestionBox();
-    }
-
-    void AfterQuestion(int choice) {
-        TextSpawner dialogueChoice;
-        if (choice == 0) {
-            dialogueChoice = youExplode;
-        }
-        else {
-            dialogueChoice = youSurvive;
-        }
-        dialogueChoice.onFinished += Finish;
-        dialogueChoice.StartText();
-    }
-
-    void Finish() {
+        yield return new WaitUntil(() => intro.finished);
+        question.StartQuestion();
+        yield return new WaitUntil(() => question.finished);
+        TextSpawner response = question.choice == 0 ? youExplode : youSurvive;
+        response.StartText();
+        yield return new WaitUntil(() => response.finished);
         player.talking = false;
-        AudioManager.PlayMusic(mainMusic);
     }
 }

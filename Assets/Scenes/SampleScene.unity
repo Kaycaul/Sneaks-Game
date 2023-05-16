@@ -530,6 +530,10 @@ PrefabInstance:
       value: (you exploded)
       objectReference: {fileID: 0}
     - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[2].showIcon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: textBoxDatas.Array.data[2].iconSprite
       value: 
       objectReference: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
@@ -624,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4278836479669325399, guid: e5a16a12a7b07f14ab5ee2ea0b863461, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4278836479669325399, guid: e5a16a12a7b07f14ab5ee2ea0b863461, type: 3}
       propertyPath: m_LocalPosition.x
@@ -768,8 +772,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1629395584}
   - {fileID: 2122119474}
+  - {fileID: 1629395584}
   - {fileID: 1472169937}
   - {fileID: 567376312}
   m_Father: {fileID: 0}
@@ -817,8 +821,6 @@ MonoBehaviour:
   question: {fileID: 1629395583}
   youExplode: {fileID: 1472169936}
   youSurvive: {fileID: 567376311}
-  talkingMusic: {fileID: 8300000, guid: ce751bfc0d3ea2c4694504844e221854, type: 3}
-  mainMusic: {fileID: 8300000, guid: ca6565aa1ae86044b9f16fd56febb0ce, type: 3}
 --- !u!50 &1920341231
 Rigidbody2D:
   serializedVersion: 4
@@ -849,33 +851,49 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: textBoxDatas.Array.size
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[0].message
+      value: You encounter a strange beast with glowing eyes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[1].message
+      value: I AM THE MOTORCYCLE
       objectReference: {fileID: 0}
     - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: textBoxDatas.Array.data[2].message
-      value: What do you want old man?
+      value: hi
       objectReference: {fileID: 0}
     - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: textBoxDatas.Array.data[3].message
+      value: What do you want old man?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[4].message
       value: 'I want to blow you up.
 
         YOU WILL EXPLODE!!!'
       objectReference: {fileID: 0}
     - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
+      propertyPath: textBoxDatas.Array.data[0].showIcon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: textBoxDatas.Array.data[2].iconSprite
       value: 
-      objectReference: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
+      objectReference: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
     - target: {fileID: 4103431461138722960, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: textBoxDatas.Array.data[3].iconSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9aeae6b8d94c83349ac2e8a3a2254137, type: 3}
+      objectReference: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
     - target: {fileID: 4103431461138722961, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: m_Name
       value: Hello
       objectReference: {fileID: 0}
     - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4103431461138722967, guid: d1b587b525f10ad4db3cb05f43c0a03c, type: 3}
       propertyPath: m_LocalPosition.x

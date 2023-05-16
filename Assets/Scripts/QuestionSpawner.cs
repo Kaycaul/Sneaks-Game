@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class QuestionSpawner : MonoBehaviour {
 
-    [SerializeField]
-    GameObject questionBoxPrefab;
-    [SerializeField]
-    QuestionBox.QuestionBoxData questionBoxData;
+    [SerializeField] GameObject questionBoxPrefab;
+    [SerializeField] QuestionBox.QuestionBoxData questionBoxData;
 
-    public event System.Action<int> OnChoiceSelected;
+    public int choice {get; private set;} = -1;
+    public bool finished {get; private set;} = false;
 
-    public void SpawnQuestionBox() {
+    public void StartQuestion() {
+        choice = -1;
+        finished = false;
         QuestionBox questionBox = Instantiate(questionBoxPrefab).GetComponent<QuestionBox>();
         questionBox.SetData(questionBoxData);
-        questionBox.OnChoiceSelected += UpdateChoice;
-    }
-
-    void UpdateChoice(int choice) {
-        if (OnChoiceSelected != null) OnChoiceSelected(choice);
+        questionBox.OnChoiceSelected += (newChoice) => {choice = newChoice; finished = true;};
     }
 }

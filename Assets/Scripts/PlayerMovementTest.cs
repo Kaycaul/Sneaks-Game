@@ -15,7 +15,6 @@ public class PlayerMovementTest : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
-        AudioManager.PlayMusic(mainMusic);
     }
 
     void FixedUpdate() {
