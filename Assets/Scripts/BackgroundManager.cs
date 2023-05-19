@@ -5,42 +5,86 @@ using UnityEngine.UI;
 
 public class BackgroundManager : MonoBehaviour {
 
-    [SerializeField] GameObject backgroundObjectPrefab;
+    [SerializeField] GameObject backgroundObjectPrefab; // background image
+    [SerializeField] GameObject characterSpritePrefab; // image of the character you are talking to
+    [SerializeField] GameObject blackScreenPrefab; // black screen usually transparent, for fade transitions
+    [SerializeField] AnimationCurve fadeCurve; // for the black screen fading
+    [SerializeField] AnimationCurve slideCurve; // for character sprites sliding in from the side
 
     public static BackgroundManager instance;
 
     Image background;
+    Image characterSprite;
+    Image blackScreen;
     bool fading = false;
+    bool sliding = false;
+    public static bool IsFading() => instance.fading;
+    public static bool IsSliding() => instance.sliding;
 
-    // create a new background image with the provided sprite
+    private const int SLIDE_DISTANCE = 400;
+
     public static void UpdateBackground(Sprite sprite) {
         instance.background.sprite = sprite;
     }
 
     public static void FadeIn() {
-        if (isFading()) return;
-        instance.fading = true;
-        instance.StartCoroutine(instance.FadeBetween(Color.black, Color.white));
+        instance.StartCoroutine(instance.FadeBetween(Color.black, Color.clear));
+    }
+
+    public static void FadeIn(Sprite sprite) {
+        UpdateBackground(sprite);
+        FadeIn();
     }
 
     public static void FadeOut() {
-        if (isFading()) return;
-        instance.fading = true;
-        instance.StartCoroutine(instance.FadeBetween(Color.white, Color.black));
+        instance.StartCoroutine(instance.FadeBetween(Color.clear, Color.black));
     }
 
-    public static bool isFading() {
-        return instance.fading;
+    public static void UpdateCharacter(Sprite sprite) {
+        instance.characterSprite.sprite = sprite;
+    }
+
+    private static float CharacterWidth() => instance.characterSprite.sprite.rect.width;
+
+    public static void HideCharacter() {
+        instance.characterSprite.rectTransform.anchoredPosition = new Vector2(-CharacterWidth(), instance.characterSprite.rectTransform.anchoredPosition.y);
+    }
+
+    public static void SlideIn() {
+        instance.StartCoroutine(instance.SlideBetween(-CharacterWidth(), SLIDE_DISTANCE));
+    }
+
+    public static void SlideIn(Sprite sprite) {
+        UpdateCharacter(sprite);
+        SlideIn();
+    }
+
+    public static void SlideOut() {
+        instance.StartCoroutine(instance.SlideBetween(SLIDE_DISTANCE, -CharacterWidth()));
     }
 
     IEnumerator FadeBetween(Color start, Color end) {
+        if (IsFading()) yield break;
+        fading = true;
         float t = 0f;
         while (t < 1f) {
-            instance.background.color = Color.Lerp(start, end, t);
+            blackScreen.color = Color.Lerp(start, end, fadeCurve.Evaluate(t));
             t += Time.deltaTime;
             yield return null;
         }
         fading = false;
+    }
+
+    IEnumerator SlideBetween(float start, float end) {
+        if (IsSliding()) yield break;
+        sliding = true;
+        float t = 0f;
+        while (t < 1f) {
+            characterSprite.rectTransform.anchoredPosition = new Vector2(Mathf.LerpUnclamped(start, end, slideCurve.Evaluate(t)), characterSprite.rectTransform.anchoredPosition.y);
+            t += Time.deltaTime;
+            yield return null;
+        }
+        sliding = false;
     }
 
     private void Awake() {
@@ -55,6 +99,12 @@ public class BackgroundManager : MonoBehaviour {
         GameObject backgroundObject = Instantiate(backgroundObjectPrefab);    
         backgroundObject.transform.SetParent(transform);
         background = backgroundObject.transform.GetChild(0).GetComponent<Image>();
+        GameObject newCharacterSprite = Instantiate(characterSpritePrefab);
+        newCharacterSprite.transform.SetParent(transform);
+        characterSprite = newCharacterSprite.transform.GetChild(0).GetComponent<Image>();
+        GameObject newBlackScreen = Instantiate(blackScreenPrefab);
+        newBlackScreen.transform.SetParent(transform);
+        blackScreen = newBlackScreen.transform.GetChild(0).GetComponent<Image>();
     }
 
 }

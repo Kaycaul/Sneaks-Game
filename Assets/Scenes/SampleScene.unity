@@ -401,6 +401,92 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundObjectPrefab: {fileID: 7970923347724303318, guid: 506c8bbd92676954fa610953118a090c, type: 3}
+  characterSpritePrefab: {fileID: 7970923347724303318, guid: 9dbf99b95da064340a238e1bf7778775, type: 3}
+  blackScreenPrefab: {fileID: 7970923347724303318, guid: d77047594736e2144a15dbc9ad87b63b, type: 3}
+  fadeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.24845645
+      value: 0.10867527
+      inSlope: 0.89786434
+      outSlope: 0.89786434
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.70856905
+      value: 0.85219836
+      inSlope: 1.1533945
+      outSlope: 1.1533945
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.12459979
+      value: -0.17373051
+      inSlope: -0.76388806
+      outSlope: -0.76388806
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.09023918
+    - serializedVersion: 3
+      time: 0.905149
+      value: 1.1056482
+      inSlope: -1.4911506
+      outSlope: -1.4911506
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08507785
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1472169935
 PrefabInstance:
   m_ObjectHideFlags: 0

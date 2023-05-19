@@ -16,9 +16,11 @@ public class MotorcycleNPC : MonoBehaviour {
     }
 
     IEnumerator Conversation() {
-        BackgroundManager.UpdateBackground(outside2);
-        BackgroundManager.FadeIn();
-        yield return new WaitUntil(() => !BackgroundManager.isFading());
+        BackgroundManager.HideCharacter();
+        BackgroundManager.FadeIn(outside2);
+        yield return new WaitUntil(() => !BackgroundManager.IsFading());
+        BackgroundManager.SlideIn();
+        yield return new WaitUntil(() => !BackgroundManager.IsSliding());
         intro.StartText();
         yield return new WaitUntil(() => intro.finished);
         question.StartQuestion();
@@ -26,9 +28,13 @@ public class MotorcycleNPC : MonoBehaviour {
         TextSpawner response = question.choice == 0 ? youExplode : youSurvive;
         response.StartText();
         yield return new WaitUntil(() => response.finished);
+        BackgroundManager.SlideOut();
+        yield return new WaitUntil(() => !BackgroundManager.IsSliding());
         BackgroundManager.FadeOut();
-        yield return new WaitUntil(() => !BackgroundManager.isFading());
-        BackgroundManager.UpdateBackground(outside);
-        BackgroundManager.FadeIn();
+        yield return new WaitUntil(() => !BackgroundManager.IsFading());
+        BackgroundManager.FadeIn(outside);
+        yield return new WaitUntil(() => !BackgroundManager.IsFading());
+        BackgroundManager.SlideIn();
+        yield return new WaitUntil(() => !BackgroundManager.IsSliding());
     }
 }
