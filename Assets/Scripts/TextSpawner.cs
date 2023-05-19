@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 // call the public methods from another script to display the messages
 public class TextSpawner : MonoBehaviour {
@@ -19,11 +20,12 @@ public class TextSpawner : MonoBehaviour {
     /// <summary>
     /// Restart the text boxes, and display the first one
     /// </summary>
-    public void StartText() {
+    public IEnumerator StartText() {
         started = true;
         finished = false;
         currentTextBoxIdx = 0;
         NextTextBox();
+        yield return new WaitUntil(() => finished);
     }
 
     /// <summary>

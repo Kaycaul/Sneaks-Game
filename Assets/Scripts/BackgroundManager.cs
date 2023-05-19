@@ -27,17 +27,19 @@ public class BackgroundManager : MonoBehaviour {
         instance.background.sprite = sprite;
     }
 
-    public static void FadeIn() {
+    public static IEnumerator FadeIn() {
         instance.StartCoroutine(instance.FadeBetween(Color.black, Color.clear));
+        yield return new WaitUntil(() => !IsFading());
     }
 
-    public static void FadeIn(Sprite sprite) {
+    public static IEnumerator FadeIn(Sprite sprite) {
         UpdateBackground(sprite);
-        FadeIn();
+        yield return FadeIn();
     }
 
-    public static void FadeOut() {
+    public static IEnumerator FadeOut() {
         instance.StartCoroutine(instance.FadeBetween(Color.clear, Color.black));
+        yield return new WaitUntil(() => !IsFading());
     }
 
     public static void UpdateCharacter(Sprite sprite) {
@@ -50,17 +52,19 @@ public class BackgroundManager : MonoBehaviour {
         instance.characterSprite.rectTransform.anchoredPosition = new Vector2(-CharacterWidth(), instance.characterSprite.rectTransform.anchoredPosition.y);
     }
 
-    public static void SlideIn() {
+    public static IEnumerator SlideIn() {
         instance.StartCoroutine(instance.SlideBetween(-CharacterWidth(), SLIDE_DISTANCE));
+        yield return new WaitUntil(() => !IsSliding());
     }
 
-    public static void SlideIn(Sprite sprite) {
+    public static IEnumerator SlideIn(Sprite sprite) {
         UpdateCharacter(sprite);
-        SlideIn();
+        yield return SlideIn();
     }
 
-    public static void SlideOut() {
+    public static IEnumerator SlideOut() {
         instance.StartCoroutine(instance.SlideBetween(SLIDE_DISTANCE, -CharacterWidth()));
+        yield return new WaitUntil(() => !IsSliding());
     }
 
     IEnumerator FadeBetween(Color start, Color end) {
@@ -105,6 +109,8 @@ public class BackgroundManager : MonoBehaviour {
         GameObject newBlackScreen = Instantiate(blackScreenPrefab);
         newBlackScreen.transform.SetParent(transform);
         blackScreen = newBlackScreen.transform.GetChild(0).GetComponent<Image>();
+
+        HideCharacter();
     }
 
 }

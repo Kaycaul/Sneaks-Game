@@ -10,11 +10,12 @@ public class QuestionSpawner : MonoBehaviour {
     public int choice {get; private set;} = -1;
     public bool finished {get; private set;} = false;
 
-    public void StartQuestion() {
+    public IEnumerator StartQuestion() {
         choice = -1;
         finished = false;
         QuestionBox questionBox = Instantiate(questionBoxPrefab).GetComponent<QuestionBox>();
         questionBox.SetData(questionBoxData);
         questionBox.OnChoiceSelected += (newChoice) => {choice = newChoice; finished = true;};
+        yield return new WaitUntil(() => finished);
     }
 }

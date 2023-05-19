@@ -8,6 +8,7 @@ public class MotorcycleNPC : MonoBehaviour {
     [SerializeField] QuestionSpawner question;
     [SerializeField] TextSpawner youExplode;
     [SerializeField] TextSpawner youSurvive;
+    [SerializeField] TextSpawner outsideText;
     [SerializeField] Sprite outside;
     [SerializeField] Sprite outside2;
 
@@ -16,25 +17,16 @@ public class MotorcycleNPC : MonoBehaviour {
     }
 
     IEnumerator Conversation() {
-        BackgroundManager.HideCharacter();
-        BackgroundManager.FadeIn(outside2);
-        yield return new WaitUntil(() => !BackgroundManager.IsFading());
-        BackgroundManager.SlideIn();
-        yield return new WaitUntil(() => !BackgroundManager.IsSliding());
-        intro.StartText();
-        yield return new WaitUntil(() => intro.finished);
-        question.StartQuestion();
-        yield return new WaitUntil(() => question.finished);
+        yield return BackgroundManager.FadeIn(outside2);
+        yield return BackgroundManager.SlideIn();
+        yield return intro.StartText();
+        yield return question.StartQuestion();
         TextSpawner response = question.choice == 0 ? youExplode : youSurvive;
-        response.StartText();
-        yield return new WaitUntil(() => response.finished);
-        BackgroundManager.SlideOut();
-        yield return new WaitUntil(() => !BackgroundManager.IsSliding());
-        BackgroundManager.FadeOut();
-        yield return new WaitUntil(() => !BackgroundManager.IsFading());
-        BackgroundManager.FadeIn(outside);
-        yield return new WaitUntil(() => !BackgroundManager.IsFading());
-        BackgroundManager.SlideIn();
-        yield return new WaitUntil(() => !BackgroundManager.IsSliding());
+        yield return response.StartText();
+        yield return BackgroundManager.SlideOut();
+        yield return BackgroundManager.FadeOut();
+        yield return BackgroundManager.FadeIn(outside);
+        yield return BackgroundManager.SlideIn();
+        yield return outsideText.StartText();
     }
 }
