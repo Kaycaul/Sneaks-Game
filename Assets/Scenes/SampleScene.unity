@@ -301,17 +301,17 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
       showIcon: 1
       message: KIB ZONE
-      voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
       showIcon: 1
       message: HIIIIIIII
-      voiceClip: {fileID: 8300000, guid: 1156be2a67f044a4dafb0e0192d7c9ab, type: 3}
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
       delayBetweenLetters: 0.05
   textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}
   outside2: {fileID: 21300000, guid: 503972491b5fb794892a98917c4cf23c, type: 3}
-  guy: {fileID: -1057487205, guid: cf01bb9baa1f9864ab7f66ec44fcb380, type: 3}
+  sneaks: {fileID: 21300000, guid: 32f76b73e08a63c4e8472df2d3b589de, type: 3}
   kibbers: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
 --- !u!4 &1369740187
 Transform:
@@ -430,8 +430,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.101567164
-      value: -0.11609397
+      time: 0.21672525
+      value: -0.113255836
       inSlope: -0.7485915
       outSlope: -0.7485915
       tangentMode: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.049164485
     - serializedVersion: 3
-      time: 0.905149
+      time: 0.8303199
       value: 1.1056482
       inSlope: -0.71049637
       outSlope: -0.71049637

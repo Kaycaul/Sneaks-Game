@@ -8,7 +8,7 @@ public class MainStory : MonoBehaviour {
     [SerializeField] GameObject textBoxPrefab;
     [SerializeField] Sprite outside1;
     [SerializeField] Sprite outside2;
-    [SerializeField] Sprite guy;
+    [SerializeField] Sprite sneaks;
     [SerializeField] Sprite kibbers;
 
     TextSpawner[] textBoxes;
@@ -26,8 +26,8 @@ public class MainStory : MonoBehaviour {
     IEnumerator Story() {
         // fade in and show character
         yield return BackgroundManager.FadeIn(outside1);
-        yield return BackgroundManager.SlideIn(guy);
-        // motorcycle conversation
+        yield return BackgroundManager.SlideIn(sneaks);
+        // sneaks conversation
         yield return textBoxes[0].StartText();
         // switch to other outside, switch character
         yield return BackgroundManager.SlideOut();

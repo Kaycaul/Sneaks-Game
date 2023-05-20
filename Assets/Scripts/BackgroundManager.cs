@@ -80,7 +80,9 @@ public class BackgroundManager : MonoBehaviour {
         sliding = true;
         float t = 0f;
         while (t < 1f) {
-            characterSprite.rectTransform.anchoredPosition = new Vector2(Mathf.LerpUnclamped(start, end, slideCurve.Evaluate(t)), characterSprite.rectTransform.anchoredPosition.y);
+            float distance = Mathf.LerpUnclamped(start, end, slideCurve.Evaluate(t));
+            characterSprite.rectTransform.anchoredPosition = new Vector2(distance, characterSprite.rectTransform.anchoredPosition.y);
+            characterSprite.color = Color.Lerp(Color.clear, Color.white, (start < end ? t : 1 - t));
             t += Time.deltaTime * 1.5f;
             yield return null;
         }
