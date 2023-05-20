@@ -28,8 +28,7 @@ public class BackgroundManager : MonoBehaviour {
     }
 
     public static IEnumerator FadeIn() {
-        instance.StartCoroutine(instance.FadeBetween(Color.black, Color.clear));
-        yield return new WaitUntil(() => !IsFading());
+        yield return instance.FadeBetween(Color.black, Color.clear);
     }
 
     public static IEnumerator FadeIn(Sprite sprite) {
@@ -38,8 +37,7 @@ public class BackgroundManager : MonoBehaviour {
     }
 
     public static IEnumerator FadeOut() {
-        instance.StartCoroutine(instance.FadeBetween(Color.clear, Color.black));
-        yield return new WaitUntil(() => !IsFading());
+        yield return instance.FadeBetween(Color.clear, Color.black);
     }
 
     public static void UpdateCharacter(Sprite sprite) {
@@ -53,8 +51,7 @@ public class BackgroundManager : MonoBehaviour {
     }
 
     public static IEnumerator SlideIn() {
-        instance.StartCoroutine(instance.SlideBetween(-CharacterWidth(), SLIDE_DISTANCE));
-        yield return new WaitUntil(() => !IsSliding());
+        yield return instance.SlideBetween(-CharacterWidth(), SLIDE_DISTANCE);
     }
 
     public static IEnumerator SlideIn(Sprite sprite) {
@@ -63,8 +60,7 @@ public class BackgroundManager : MonoBehaviour {
     }
 
     public static IEnumerator SlideOut() {
-        instance.StartCoroutine(instance.SlideBetween(SLIDE_DISTANCE, -CharacterWidth()));
-        yield return new WaitUntil(() => !IsSliding());
+        yield return instance.SlideBetween(SLIDE_DISTANCE, -CharacterWidth());
     }
 
     IEnumerator FadeBetween(Color start, Color end) {
@@ -85,7 +81,7 @@ public class BackgroundManager : MonoBehaviour {
         float t = 0f;
         while (t < 1f) {
             characterSprite.rectTransform.anchoredPosition = new Vector2(Mathf.LerpUnclamped(start, end, slideCurve.Evaluate(t)), characterSprite.rectTransform.anchoredPosition.y);
-            t += Time.deltaTime;
+            t += Time.deltaTime * 1.5f;
             yield return null;
         }
         sliding = false;

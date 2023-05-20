@@ -57,4 +57,17 @@ public class TextSpawner : MonoBehaviour {
         public AudioClip voiceClip;
         public float delayBetweenLetters;
     }
+
+    [System.Serializable]
+    public class Conversation {
+        public TextBoxData[] boxes;
+    }
+
+    public static TextSpawner CreateSpawner(TextBoxData[] data, GameObject textBoxPrefab) {
+        GameObject newSpawner = new GameObject("TextSpawner");
+        TextSpawner textSpawner = newSpawner.AddComponent<TextSpawner>();
+        textSpawner.textBoxPrefab = textBoxPrefab;
+        textSpawner.textBoxDatas = data;
+        return textSpawner;
+    }
 }

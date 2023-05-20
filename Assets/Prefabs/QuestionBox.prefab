@@ -213,7 +213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -4}
+  m_AnchoredPosition: {x: -83, y: -5.3}
   m_SizeDelta: {x: -200.21, y: 155.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7496707789034915990
@@ -366,7 +366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 8497675137522332403}
-  voiceBeeper: {fileID: 5052415628084806164}
   choices:
   - 111
   - 12123
