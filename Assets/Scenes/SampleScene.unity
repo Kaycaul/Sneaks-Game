@@ -289,7 +289,7 @@ MonoBehaviour:
       delayBetweenLetters: 0.03
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
-      message: '(Oh! The bell.)
+      message: '(Oh! The bell.)\\\
 
         (Finally, I thought this class was never
         going to end.)'
@@ -313,13 +313,13 @@ MonoBehaviour:
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
-      message: Rain streams down around you. You've never seen it pour quite this
+      message: Rain streams down around you.\\\ You've never seen it pour quite this
         hard before.
       voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
       delayBetweenLetters: 0.03
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
-      message: 'Ugh...
+      message: 'Ugh...\\
 
         Guess I''ll just have to run to the bus stop today.'
       voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
@@ -327,7 +327,7 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
       message: You use your backpack to shield your head from the worst of the rain
-        as your run, splashing into deep puddles and soaking your legs to the knee.
+        as your run,\\ splashing into deep puddles and soaking your legs to the knee.
       voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
       delayBetweenLetters: 0.03
   - boxes:

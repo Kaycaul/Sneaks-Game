@@ -32,12 +32,18 @@ public class TextBox : MonoBehaviour {
     IEnumerator ShowText() {
         textBoxToUse.text = "";
         int messageProgress = 0;
+        // each letter is added to the text box, one at a time.
+        // there are 3 exceptions, none of which play sound:
+        // spaces
+        // newlines, which process for 3 times longer
+        // backslashes, used as a delay, dont render
         while (messageProgress < message.Length) {
             // add the next letter to the text box
             char character = message[messageProgress++];
-            textBoxToUse.text += character;
+            // add the character, unless it is a delay character
+            if (!character.Equals('\\')) textBoxToUse.text += character;
             // play a sound when a character other than a space is added
-            if (!character.Equals(' ') && !character.Equals('\n')) {
+            if (!character.Equals(' ') && !character.Equals('\n') && !character.Equals('\\')) {
                 AudioManager.PlaySound(voiceClip);
             }
             // set the finished flag and return if message is finished
@@ -47,9 +53,9 @@ public class TextBox : MonoBehaviour {
                 finished = true;
                 yield break;
             }
-            // double delay on newline characters
-            if (character.Equals('\n')) {
-                yield return new WaitForSeconds(delayBetweenLetters);
+            // triple delay on special characters
+            if (character.Equals('\n') || character.Equals('\\')) {
+                yield return new WaitForSeconds(2*delayBetweenLetters);
             }
             // wait a delay before adding the next letter
             yield return new WaitForSeconds(delayBetweenLetters);
