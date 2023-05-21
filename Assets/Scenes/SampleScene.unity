@@ -281,7 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBoxDatas:
-  - boxes:
+  - title: Intro
+    boxes:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
       message: Brring! Brring!
@@ -327,21 +328,137 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
       message: You use your backpack to shield your head from the worst of the rain
-        as your run,\\ splashing into deep puddles and soaking your legs to the knee.
+        as you run,\\ splashing into deep puddles and soaking your legs to the knee.
       voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
       delayBetweenLetters: 0.03
-  - boxes:
-    - iconSprite: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: As you near the bus stop,\ you notice a figure emerging through the
+        downpour...
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
-      message: KIB ZONE
-      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      message: (Is that...)
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
       delayBetweenLetters: 0.05
-    - iconSprite: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
+  - title: Sneaks Appears
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
-      message: HIIIIIIII
-      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      message: S-\\Sneaks?!
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
       delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Ahh, anyone but him! I'm all wet, my hair is probably a mess, I'm
+        covered in mud-)
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: He turns his head to look at you as you approach, smirking like a
+        little bitch.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'oh hey\\\
+
+        whats up'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Say Hello
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: H-\Hi sneaks... Uh... \\\Come here often?
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (WHY DID I SAY THAT)
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'yeah,\ like... every day\\
+
+        multiple times'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: 'Hey, uh... Me too!\
+
+        Haha!\
+
+        That''s so crazy!'
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'wow\\
+
+        we have a lot in common ;)'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Say Nothing
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: '(Ah... \He looks so smug...)\\
+
+        (I''m a little intimidated.)'
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: 'The two of you stand in silence for a while,\ the rain pattering
+        down around you.\ '
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: You catch sneaks looking at you from the corner of his eye as you
+        stare intently at the ground.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: youre not really one to talk, \\huh?
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Blush
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: You flare up in a blush strong enough to make you lightheaded.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: '(Ahh, why did I do that!!)\
+
+        He totally hates me now, doesn''t
+        he?)'
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: I'm sorr-
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+  questionBoxDatas:
+  - title: Say Hello
+    message: 
+    choices:
+    - Say hello
+    - Say nothing
+    voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+    delayBetweenLetters: 0.03
   textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
+  questionBoxPrefab: {fileID: 5052415627960986484, guid: 8a7e07b7f4a57ee46a4c4902eb896e5a, type: 3}
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}
   outside2: {fileID: 21300000, guid: 503972491b5fb794892a98917c4cf23c, type: 3}
   sneaks: {fileID: 21300000, guid: 32f76b73e08a63c4e8472df2d3b589de, type: 3}

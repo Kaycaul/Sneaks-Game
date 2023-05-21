@@ -12,6 +12,8 @@ public class TextSpawner : MonoBehaviour {
     bool started = false;
     public bool finished {get; private set;} = false;
 
+    public string title;
+
     private void Update() {
         // next on space pressed
         if (Input.GetKeyDown(KeyCode.Space) && started) NextTextBox();
@@ -60,6 +62,7 @@ public class TextSpawner : MonoBehaviour {
 
     [System.Serializable]
     public class Conversation {
+        public string title;
         public TextBoxData[] boxes;
     }
 

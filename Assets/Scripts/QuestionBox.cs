@@ -29,6 +29,7 @@ public class QuestionBox : MonoBehaviour {
         textBox.text = "";
         int messageProgress = 0;
         // display the message
+        readyToChoose = message == "";
         while (!readyToChoose) {
             // add the next letter to the text box
             char character = message[messageProgress++];
@@ -49,6 +50,7 @@ public class QuestionBox : MonoBehaviour {
             yield return new WaitForSeconds(delayBetweenLetters);
         }
         // display the questions and let the player choose
+        yield return null; // wait a frame to reset input
         while (!finished) {
 
             // stop when the player makes a choice
@@ -69,8 +71,9 @@ public class QuestionBox : MonoBehaviour {
             if (readyToChoose) {
                 // display the choices
                 textBox.text = message;
+                if (message != "") textBox.text += "\r\n";
                 for (int i = 0; i < choices.Length; i++) {
-                    textBox.text += (currentChoice == i ? "\r\n>" : "\r\n") + choices[i];
+                    textBox.text += (currentChoice == i ? ">" : "") + choices[i] + "\r\n";
                 }
             }
             yield return null;
@@ -80,6 +83,7 @@ public class QuestionBox : MonoBehaviour {
 
     [System.Serializable]
     public class QuestionBoxData {
+        public string title; // only for reference
         public string message;
         public string[] choices;
         public AudioClip voiceClip;
