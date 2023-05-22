@@ -16,11 +16,17 @@ public class TextBox : MonoBehaviour {
     string message;
     float delayBetweenLetters;
     bool showIcon;
+    float oldDelay;
 
     // read only property for the finished flag
     [HideInInspector] public bool finished {get; private set;} = false;
 
     private void Start() {
+        // cheat code
+        if (Input.GetKey(KeyCode.Delete)) {
+            delayBetweenLetters = 0.00001f;
+        }
+        // hide certain elements not needed
         buttonPrompt.gameObject.SetActive(false);
         icon.gameObject.SetActive(showIcon);
         textBox.gameObject.SetActive(showIcon);

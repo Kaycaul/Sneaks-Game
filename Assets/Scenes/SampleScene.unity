@@ -294,7 +294,7 @@ MonoBehaviour:
 
         (Finally, I thought this class was never
         going to end.)'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: Are you serious?!
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
       message: 'Ugh...\\
 
         Guess I''ll just have to run to the bus stop today.'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -340,20 +340,20 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: (Is that...)
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
   - title: Sneaks Appears
     boxes:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: S-\\Sneaks?!
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: (Ahh, anyone but him! I'm all wet, my hair is probably a mess, I'm
         covered in mud-)
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -373,12 +373,12 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: H-\Hi sneaks... Uh... \\\Come here often?
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: (WHY DID I SAY THAT)
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
       showIcon: 1
@@ -394,7 +394,7 @@ MonoBehaviour:
         Haha!\
 
         That''s so crazy!'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
       showIcon: 1
@@ -410,7 +410,7 @@ MonoBehaviour:
       message: '(Ah... \He looks so smug...)\\
 
         (I''m a little intimidated.)'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -442,12 +442,12 @@ MonoBehaviour:
 
         He totally hates me now, doesn''t
         he?)'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: I'm sorr-
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
       showIcon: 1
@@ -459,7 +459,7 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: Huh?!
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
       showIcon: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
       message: 'Oh!\ Um,\ of course.\\
 
         Thank you?'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -507,13 +507,13 @@ MonoBehaviour:
 
         (It
         probably smells like him...)'
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: A-\Ah...!\\ sneaky-kun's umbrella... \I've never been bestowed a g-\greater
         honor!\\ A-\Arigato gozaimasu sneaks-senapai!
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -539,7 +539,7 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: Huh??!
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
       message: '(He''s giving me HIS umbrella?)\\
 
 '
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
   - title: Hold Umbrella
     boxes:
@@ -577,12 +577,12 @@ MonoBehaviour:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: Uhmm- \I'm uh, \I'm so sorry...
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
       message: (Now he's soaked too... \please don't be mad..)
-      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
     - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
       showIcon: 1
