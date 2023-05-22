@@ -501,7 +501,7 @@ MonoBehaviour:
     boxes:
     - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
       showIcon: 1
-      message: '(s-\sneaks; umbrella...)\\
+      message: '(s-\sneaks'' umbrella...)\\
 
         (It''s touched his hand...)\\
 
@@ -564,6 +564,44 @@ MonoBehaviour:
 '
       voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
       delayBetweenLetters: 0.05
+  - title: Hold Umbrella
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: 'You hold the umbrella close, \but a strong gust of wind suddenly
+        carries it away!\\\
+
+        The two of you are now left without umbrellas.'
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Uhmm- \I'm uh, \I'm so sorry...
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Now he's soaked too... \please don't be mad..)
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: .\.\.\.\.\.\.\.\.\.\\.\\.\.\\\\\.
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: lmao
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.06
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'oh well, that was only my parachuting umbrella\\\
+
+        i have
+        more at home,\ wanna come?'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
   questionBoxDatas:
   - title: Say Hello
     message: 
@@ -584,6 +622,7 @@ MonoBehaviour:
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}
   outside2: {fileID: 21300000, guid: 503972491b5fb794892a98917c4cf23c, type: 3}
   umbrellaCg: {fileID: 21300000, guid: 547cc6f57c100cf41948d2b85db8168a, type: 3}
+  hellCg: {fileID: 21300000, guid: b1a38233826d0894a939faf9d6f19278, type: 3}
   sneaks: {fileID: 21300000, guid: 32f76b73e08a63c4e8472df2d3b589de, type: 3}
   kibbers: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
 --- !u!4 &1369740187

@@ -11,6 +11,7 @@ public class MainStory : MonoBehaviour {
     [SerializeField] Sprite outside1;
     [SerializeField] Sprite outside2;
     [SerializeField] Sprite umbrellaCg;
+    [SerializeField] Sprite hellCg;
     [SerializeField] Sprite sneaks;
     [SerializeField] Sprite kibbers;
 
