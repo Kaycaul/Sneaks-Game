@@ -5,7 +5,7 @@ using System.Collections;
 public class TextSpawner : MonoBehaviour {
 
     [SerializeField] GameObject textBoxPrefab;
-    [SerializeField] TextBoxData[] textBoxDatas;
+    [SerializeField] public TextBoxData[] textBoxDatas;
 
     int currentTextBoxIdx = 0;
     TextBox currentTextBox;

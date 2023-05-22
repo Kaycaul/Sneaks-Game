@@ -10,6 +10,7 @@ public class MainStory : MonoBehaviour {
     [SerializeField] GameObject questionBoxPrefab;
     [SerializeField] Sprite outside1;
     [SerializeField] Sprite outside2;
+    [SerializeField] Sprite umbrellaCg;
     [SerializeField] Sprite sneaks;
     [SerializeField] Sprite kibbers;
 
@@ -35,16 +36,16 @@ public class MainStory : MonoBehaviour {
         StartCoroutine(Story());
     }
 
-    IEnumerator ShowConversation(string title) {
-        // find the textspawner with that title
+    TextSpawner GetSpawner(string title) {
         foreach (TextSpawner spawner in textBoxes) {
-            if (spawner.title == title) {
-                yield return spawner.StartText();
-                yield break;
-            }
+            if (spawner.title == title) return spawner;
         }
-        // couldnt find it
         Debug.LogError("Couldnt find textbox with title " + title);
+        return new TextSpawner();
+    }
+
+    IEnumerator ShowConversation(string title) {
+        yield return GetSpawner(title).StartText();     
     }
 
     IEnumerator ShowQuestion(string title) {
@@ -66,8 +67,24 @@ public class MainStory : MonoBehaviour {
         yield return BackgroundManager.SlideIn(sneaks);
         yield return ShowConversation("Sneaks Appears");
         yield return ShowQuestion("Say Hello");
-        yield return ShowConversation(lastChoice == 0 ? "Say Hello" : "Say Nothing");
+        bool saidHello = lastChoice == 0;
+        yield return ShowConversation(saidHello ? "Say Hello" : "Say Nothing");
         yield return ShowConversation("Blush");
+        yield return BackgroundManager.FadeOut();
+        yield return BackgroundManager.SlideOut();
+        yield return BackgroundManager.FadeIn(umbrellaCg);
+        yield return ShowConversation("Second Umbrella");
+        yield return ShowQuestion("Act Normal");
+        bool actedNormal = lastChoice == 0;
+        yield return ShowConversation(actedNormal ? "Act Normal" : "Act Like A Weirdo");
+        // stupid hack because im too lazy to make an entire conversation just for this one variation
+        TextSpawner takeUmbrella = GetSpawner("Take Umbrella");
+        takeUmbrella.textBoxDatas[4].message += actedNormal ? "(So kind of him...\\ does he really like me?)" : "(It smells even more strongly of him...)";
+        yield return takeUmbrella.StartText();
+        yield return BackgroundManager.FadeOut();
+        yield return BackgroundManager.SlideIn(sneaks);
+        yield return BackgroundManager.FadeIn(outside1);
+        yield return ShowConversation("Hold Umbrella");
 
     }
     

@@ -449,6 +449,121 @@ MonoBehaviour:
       message: I'm sorr-
       voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
       delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'hey,\\ you look like a mess\\\
+
+        wanna use my umbrella?'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Huh?!
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'my plot convenient second umbrella :3\\\
+
+        you want it?'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Second Umbrella
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: He pulls a second umbrella out of god knows where and holds it out
+        to you.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+  - title: Act Normal
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: 'Oh!\ Um,\ of course.\\
+
+        Thank you?'
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: He gently hands you the umbrella.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'here\\\
+
+        its on the house ;3'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Act Like A Weirdo
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: '(s-\sneaks; umbrella...)\\
+
+        (It''s touched his hand...)\\
+
+        (It
+        probably smells like him...)'
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: A-\Ah...!\\ sneaky-kun's umbrella... \I've never been bestowed a g-\greater
+        honor!\\ A-\Arigato gozaimasu sneaks-senapai!
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: sneaks' expression warps into something of disgust as he hands you
+        the umbrella.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'im gonna act like i didnt hear that\\
+
+        just take the umbrella'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Take Umbrella
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: You take the umbrella, relieved at the possibility of shelter from
+        the rain.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Huh??!
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: 'Rain is pouring through the umbrella.\\
+
+        ...Somehow, it feels
+        like MORE rain is falling on you than before.'
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'lol whoops that mustve been my shower umbrella, my bad\\
+
+        here,\
+        you can just take mine'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: '(He''s giving me HIS umbrella?)\\
+
+'
+      voiceClip: {fileID: 8300000, guid: 4476608bc079df34187cc1f28bb1eb6f, type: 3}
+      delayBetweenLetters: 0.05
   questionBoxDatas:
   - title: Say Hello
     message: 
@@ -457,10 +572,18 @@ MonoBehaviour:
     - Say nothing
     voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
     delayBetweenLetters: 0.03
+  - title: Act Normal
+    message: 
+    choices:
+    - Act normal
+    - Act like a weirdo
+    voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+    delayBetweenLetters: 0.03
   textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
   questionBoxPrefab: {fileID: 5052415627960986484, guid: 8a7e07b7f4a57ee46a4c4902eb896e5a, type: 3}
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}
   outside2: {fileID: 21300000, guid: 503972491b5fb794892a98917c4cf23c, type: 3}
+  umbrellaCg: {fileID: 21300000, guid: 547cc6f57c100cf41948d2b85db8168a, type: 3}
   sneaks: {fileID: 21300000, guid: 32f76b73e08a63c4e8472df2d3b589de, type: 3}
   kibbers: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
 --- !u!4 &1369740187
