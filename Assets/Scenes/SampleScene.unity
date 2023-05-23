@@ -602,6 +602,111 @@ MonoBehaviour:
         more at home,\ wanna come?'
       voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
       delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (H-\He's inviting me to his house...?)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (This is a dream come true, \but...)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Ah,\ I just remembered! I-\I planned to go to the anvil store after
+        school today... I'm sorry..
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'hey, \its no biggie\\
+
+        i can just go with you then'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: offer still stands to come back to my place though ;3
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Going shopping with sneaks...)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Isn't that....)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Like...\a date?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: 'i was thinking more like\\
+
+        a shopping trip\\\
+
+        but
+        sure'
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: You feel like you're going to pass out.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: '(Today can''t be real.)\\
+
+        (A date with sneaks...)\\
+
+        (Or...\
+        going to his house with him...)'
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Go Sneaks House
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: 'I can just go shopping another day!\
+
+        L-\Let''s go straight
+        to your house!'
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: ok
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: lmao
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Go Shopping
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: I really need to go to the anvil store.... Let's go there first!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: ok
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: lmao
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
   questionBoxDatas:
   - title: Say Hello
     message: 
@@ -617,6 +722,13 @@ MonoBehaviour:
     - Act like a weirdo
     voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
     delayBetweenLetters: 0.03
+  - title: Choose Next Location
+    message: How am I supposed to choose something like that?!
+    choices:
+    - Go to his house
+    - Go to the anvil store
+    voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+    delayBetweenLetters: 0.05
   textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
   questionBoxPrefab: {fileID: 5052415627960986484, guid: 8a7e07b7f4a57ee46a4c4902eb896e5a, type: 3}
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}

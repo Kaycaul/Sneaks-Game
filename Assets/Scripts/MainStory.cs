@@ -86,6 +86,9 @@ public class MainStory : MonoBehaviour {
         yield return BackgroundManager.SlideIn(sneaks);
         yield return BackgroundManager.FadeIn(outside1);
         yield return ShowConversation("Hold Umbrella");
+        yield return ShowQuestion("Choose Next Location");
+        bool goToSneaksHouse = lastChoice == 0;
+        yield return ShowConversation(goToSneaksHouse ? "Go Sneaks House" : "Go Shopping");
 
     }
     
