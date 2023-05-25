@@ -733,7 +733,8 @@ MonoBehaviour:
   questionBoxPrefab: {fileID: 5052415627960986484, guid: 8a7e07b7f4a57ee46a4c4902eb896e5a, type: 3}
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}
   outside2: {fileID: 21300000, guid: 503972491b5fb794892a98917c4cf23c, type: 3}
-  umbrellaCg: {fileID: 21300000, guid: 547cc6f57c100cf41948d2b85db8168a, type: 3}
+  umbrellaCg: {fileID: 21300000, guid: cc64dfe4c9dfe3d438232907dd0a904a, type: 3}
+  weirdUmbrellaCg: {fileID: 21300000, guid: afea78d35a234a842af4c6ee6b918688, type: 3}
   hellCg: {fileID: 21300000, guid: b1a38233826d0894a939faf9d6f19278, type: 3}
   sneaks: {fileID: 21300000, guid: 32f76b73e08a63c4e8472df2d3b589de, type: 3}
   kibbers: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}

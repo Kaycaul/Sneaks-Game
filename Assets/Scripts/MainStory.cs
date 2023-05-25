@@ -11,6 +11,7 @@ public class MainStory : MonoBehaviour {
     [SerializeField] Sprite outside1;
     [SerializeField] Sprite outside2;
     [SerializeField] Sprite umbrellaCg;
+    [SerializeField] Sprite weirdUmbrellaCg;
     [SerializeField] Sprite hellCg;
     [SerializeField] Sprite sneaks;
     [SerializeField] Sprite kibbers;
@@ -77,7 +78,9 @@ public class MainStory : MonoBehaviour {
         yield return ShowConversation("Second Umbrella");
         yield return ShowQuestion("Act Normal");
         bool actedNormal = lastChoice == 0;
+        if (!actedNormal) BackgroundManager.UpdateBackground(weirdUmbrellaCg);
         yield return ShowConversation(actedNormal ? "Act Normal" : "Act Like A Weirdo");
+        BackgroundManager.UpdateBackground(umbrellaCg);
         // stupid hack because im too lazy to make an entire conversation just for this one variation
         TextSpawner takeUmbrella = GetSpawner("Take Umbrella");
         takeUmbrella.textBoxDatas[4].message += actedNormal ? "(So kind of him...\\ does he really like me?)" : "(It smells even more strongly of him...)";
