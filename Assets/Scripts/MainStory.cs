@@ -8,13 +8,9 @@ public class MainStory : MonoBehaviour {
     [SerializeField] QuestionBox.QuestionBoxData[] questionBoxDatas;
     [SerializeField] GameObject textBoxPrefab;
     [SerializeField] GameObject questionBoxPrefab;
-    [SerializeField] Sprite outside1;
-    [SerializeField] Sprite outside2;
-    [SerializeField] Sprite umbrellaCg;
-    [SerializeField] Sprite weirdUmbrellaCg;
-    [SerializeField] Sprite hellCg;
-    [SerializeField] Sprite sneaks;
-    [SerializeField] Sprite kibbers;
+    [SerializeField] Sprite outside1, outside2, umbrellaCg, weirdUmbrellaCg, hellCg, sneaks, kibbers;
+    [SerializeField] AudioClip outsideMusic;
+    [SerializeField] AudioClip rain, crowd, cars, insideRain;
 
     TextSpawner[] textBoxes;
     QuestionSpawner[] questionBoxes;
@@ -64,8 +60,16 @@ public class MainStory : MonoBehaviour {
     }
 
     IEnumerator Story() {
-        yield return BackgroundManager.FadeIn(outside1);
+        AudioManager.PlayMusic(outsideMusic);
+        AmbienceSource crowdSource = AudioManager.PlayAmbience(crowd);
+        AmbienceSource insideRainSource = AudioManager.PlayAmbience(insideRain);
         yield return ShowConversation("Intro");
+        yield return BackgroundManager.FadeIn(outside1);
+        crowdSource.StopAmbience();
+        insideRainSource.StopAmbience();
+        AmbienceSource outsideRainSource = AudioManager.PlayAmbience(rain);
+        AmbienceSource trafficSource = AudioManager.PlayAmbience(cars);
+        yield return ShowConversation("Outside");
         yield return BackgroundManager.SlideIn(sneaks);
         yield return ShowConversation("Sneaks Appears");
         yield return ShowQuestion("Say Hello");
