@@ -10,6 +10,34 @@ public class AudioManager : MonoBehaviour {
     static AudioSource sfxSource;
     static AudioSource[] musicSources = new AudioSource[2];
     static int activeMusicSourceIndex = 0;
+    static float masterVolume, musicVolume, sfxVolume, ambienceVolume;
+
+    static event System.Action<float> OnAmbienceVolumeChanged;
+
+    // update the volume of sources, should be called by ui
+    public static void SetMasterVolume(float volume) {
+        masterVolume = volume;
+        SetMusicVolume(musicVolume);
+        SetSfxVolume(sfxVolume);
+    }
+    
+    public static void SetMusicVolume(float volume) {
+        musicVolume = volume;
+        foreach (AudioSource source in musicSources) {
+            source.volume = musicVolume * masterVolume;
+        }
+    }
+
+    public static void SetSfxVolume(float volume) {
+        sfxVolume = volume;
+        sfxSource.volume = sfxVolume * masterVolume;
+    }
+
+    public static void SetAmbienceVolume(float volume) {
+        ambienceVolume = volume;
+        // update the volume of every subscribed source
+        if (OnAmbienceVolumeChanged != null) OnAmbienceVolumeChanged(ambienceVolume * masterVolume);
+    }
 
     // plays a sound just once
     public static void PlaySound(AudioClip clip) {
@@ -31,7 +59,12 @@ public class AudioManager : MonoBehaviour {
         musicSources[activeMusicSourceIndex].clip = clip;
         musicSources[activeMusicSourceIndex].Play();
 
-        instance.StartCoroutine(CrossFade(fadeDuration, musicSources[activeMusicSourceIndex], musicSources[1 - activeMusicSourceIndex]));
+        instance.StartCoroutine(CrossFade(
+            fadeDuration, 
+            musicSources[activeMusicSourceIndex], 
+            musicSources[1 - activeMusicSourceIndex],
+            musicVolume * masterVolume
+            ));
     }
 
     // play an ambient sound
@@ -42,17 +75,20 @@ public class AudioManager : MonoBehaviour {
             return null;
         }
         AmbienceSource ambienceSource = new GameObject("Ambience Source").AddComponent<AmbienceSource>();
+        // set the volume and subscribe it for future updates
+        ambienceSource.SetVolume(ambienceVolume * masterVolume);
+        OnAmbienceVolumeChanged += ambienceSource.SetVolume;
         ambienceSource.StartAmbience(clip);
         return ambienceSource; // caller should call StopAmbience() when done using
     }
 
     // fade between two audio sources
-    static IEnumerator CrossFade(float duration, AudioSource source1, AudioSource source2) {
+    static IEnumerator CrossFade(float duration, AudioSource source1, AudioSource source2, float maxVolume) {
         float percent = 0;
         while (percent < 1) {
             percent += Time.deltaTime / duration;
-            source1.volume = Mathf.Lerp(0, 1, percent);
-            source2.volume = Mathf.Lerp(1, 0, percent);
+            source1.volume = Mathf.Lerp(0, maxVolume, percent);
+            source2.volume = Mathf.Lerp(maxVolume, 0, percent);
             yield return null;
         }
     }

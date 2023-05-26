@@ -16,7 +16,6 @@ public class MainStory : MonoBehaviour {
     QuestionSpawner[] questionBoxes;
 
     int lastChoice = -1;
-    
     private void Start() {
         // create textboxes
         textBoxes = new TextSpawner[textBoxDatas.Length];
@@ -60,6 +59,12 @@ public class MainStory : MonoBehaviour {
     }
 
     IEnumerator Story() {
+        // temp for volume testing
+        AudioManager.SetMasterVolume(0.5f);
+        AudioManager.SetSfxVolume(0.9f);
+        AudioManager.SetMusicVolume(0.4f);
+        AudioManager.SetAmbienceVolume(0.3f);
+        // \temp
         AudioManager.PlayMusic(outsideMusic);
         AmbienceSource crowdSource = AudioManager.PlayAmbience(crowd);
         AmbienceSource insideRainSource = AudioManager.PlayAmbience(insideRain);

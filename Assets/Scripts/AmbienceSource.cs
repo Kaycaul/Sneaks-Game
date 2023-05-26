@@ -5,6 +5,12 @@ using UnityEngine;
 public class AmbienceSource : MonoBehaviour {
     
     AudioSource source;
+    float currentVolume;
+    
+    public void SetVolume(float newVolume) {
+        currentVolume = newVolume;
+        source.volume = newVolume;
+    }
 
     private void Awake() {
         source = gameObject.AddComponent<AudioSource>();
@@ -14,8 +20,8 @@ public class AmbienceSource : MonoBehaviour {
     public void StartAmbience(AudioClip clip) {
         source.clip = clip;
         source.Play();
-        // fade in
-        StartCoroutine(Fade(0f, 1f, 2f));
+        StartCoroutine(Fade(0f, currentVolume, 1f)); // fade in over the course of a second
+        source.volume = currentVolume;
     }
 
     public void StopAmbience() {
@@ -24,12 +30,13 @@ public class AmbienceSource : MonoBehaviour {
 
     IEnumerator Stop() {
         // fade out
-        yield return Fade(1f, 0f, 2f);
+        yield return Fade(currentVolume, 0f, 2f);
         // stop 
         source.Stop();
         GameObject.Destroy(gameObject);
     }
-
+    
+    // varies the volume over a specified duration
     IEnumerator Fade(float startVolume, float endVolume, float duration = 1) {
         float percent = 0;
         while (percent < 1) {
