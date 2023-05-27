@@ -11,6 +11,10 @@ public class AudioManager : MonoBehaviour {
     static AudioSource[] musicSources = new AudioSource[2];
     static int activeMusicSourceIndex = 0;
     static float masterVolume, musicVolume, sfxVolume, ambienceVolume;
+    public static float GetMasterVolume() => masterVolume;
+    public static float GetMusicVolume() => musicVolume;
+    public static float GetSfxVolume() => sfxVolume;
+    public static float GetAmbienceVolume() => ambienceVolume;
 
     static event System.Action<float> OnAmbienceVolumeChanged;
 
@@ -19,6 +23,7 @@ public class AudioManager : MonoBehaviour {
         masterVolume = volume;
         SetMusicVolume(musicVolume);
         SetSfxVolume(sfxVolume);
+        SetAmbienceVolume(ambienceVolume);
     }
     
     public static void SetMusicVolume(float volume) {
@@ -115,6 +120,13 @@ public class AudioManager : MonoBehaviour {
         GameObject newSfxSource = new GameObject("Sfx Source");
         newSfxSource.transform.parent = transform;
         sfxSource = newSfxSource.AddComponent<AudioSource>();
+
+        // temp for volume testing, might keep it tho
+        SetMasterVolume(0.8f);
+        SetSfxVolume(0.8f);
+        SetMusicVolume(0.2f);
+        SetAmbienceVolume(0.4f);
+        // \temp
     }
     
 }

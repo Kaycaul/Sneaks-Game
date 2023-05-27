@@ -14,9 +14,12 @@ public class TextSpawner : MonoBehaviour {
 
     public string title;
 
-    private void Update() {
-        // next on space pressed
-        if (Input.GetKeyDown(KeyCode.Space) && started) NextTextBox();
+    private void Awake() {
+        InputManager.OnNextTextbox += NextPressed;
+    }
+
+    private void NextPressed() {
+        if (started) NextTextBox();
     }
 
     /// <summary>
