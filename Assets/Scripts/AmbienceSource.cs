@@ -35,6 +35,10 @@ public class AmbienceSource : MonoBehaviour {
         source.Stop();
         GameObject.Destroy(gameObject);
     }
+
+    private void OnDestroy() {
+        AudioManager.OnAmbienceVolumeChanged -= SetVolume;
+    }
     
     // varies the volume over a specified duration
     IEnumerator Fade(float startVolume, float endVolume, float duration = 1) {

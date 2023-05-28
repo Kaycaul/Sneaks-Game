@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -14,6 +15,10 @@ public class PauseMenu : MonoBehaviour {
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
         InputManager.OnPause += PausePressed;
+    }
+
+    private void OnDestroy() {
+        InputManager.OnPause -= PausePressed;
     }
 
     private void Start() {
@@ -29,8 +34,12 @@ public class PauseMenu : MonoBehaviour {
     public void SetAmbienceVolume(float volume) => AudioManager.SetAmbienceVolume(volume);
 
     public void MainMenu() {
-        // TODO: return to main menu
-        throw new System.NotImplementedException();
+        Unpause();
+        // stop all ambience sources
+        AudioManager.StopAllAmbienceSources();
+        // hide the character and swtich scenes
+        BackgroundManager.HideCharacter();
+        SceneManager.LoadScene("Main Menu");
     }
 
     // called by inputmanager when esc pressed

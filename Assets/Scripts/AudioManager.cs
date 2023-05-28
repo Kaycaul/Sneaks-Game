@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class AudioManager : MonoBehaviour {
     public static float GetSfxVolume() => sfxVolume;
     public static float GetAmbienceVolume() => ambienceVolume;
 
-    static event System.Action<float> OnAmbienceVolumeChanged;
+    public static event System.Action<float> OnAmbienceVolumeChanged;
 
     // update the volume of sources, should be called by ui
     public static void SetMasterVolume(float volume) {
@@ -28,9 +29,8 @@ public class AudioManager : MonoBehaviour {
     
     public static void SetMusicVolume(float volume) {
         musicVolume = volume;
-        foreach (AudioSource source in musicSources) {
-            source.volume = musicVolume * masterVolume;
-        }
+        // only update the active music source
+        musicSources[activeMusicSourceIndex].volume = musicVolume * masterVolume;
     }
 
     public static void SetSfxVolume(float volume) {
@@ -80,6 +80,7 @@ public class AudioManager : MonoBehaviour {
             return null;
         }
         AmbienceSource ambienceSource = new GameObject("Ambience Source").AddComponent<AmbienceSource>();
+        ambienceSource.transform.SetParent(instance.transform);
         // set the volume and subscribe it for future updates
         ambienceSource.SetVolume(ambienceVolume * masterVolume);
         OnAmbienceVolumeChanged += ambienceSource.SetVolume;
@@ -128,5 +129,10 @@ public class AudioManager : MonoBehaviour {
         SetAmbienceVolume(0.4f);
         // \temp
     }
-    
+
+    public static void StopAllAmbienceSources() {
+        foreach (AmbienceSource ambienceSource in FindObjectsOfType<AmbienceSource>()) {
+            ambienceSource.StopAmbience();
+        }
+    }
 }

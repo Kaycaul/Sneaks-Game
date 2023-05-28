@@ -18,6 +18,10 @@ public class TextSpawner : MonoBehaviour {
         InputManager.OnNextTextbox += NextPressed;
     }
 
+    private void OnDestroy() {
+        InputManager.OnNextTextbox -= NextPressed;
+    }
+
     private void NextPressed() {
         if (started) NextTextBox();
     }
