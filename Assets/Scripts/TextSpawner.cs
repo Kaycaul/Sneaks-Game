@@ -42,6 +42,8 @@ public class TextSpawner : MonoBehaviour {
     /// Should be called when the player clicks as they read.
     /// </summary>
     public void NextTextBox() {
+        // tell the textbox to skip
+        currentTextBox?.Skip();
         // return if current text box is not finished
         if (currentTextBox != null && !currentTextBox.finished) return;
         // display the next text box if there is one

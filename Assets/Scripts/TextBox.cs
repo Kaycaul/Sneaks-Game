@@ -17,6 +17,7 @@ public class TextBox : MonoBehaviour {
     float delayBetweenLetters;
     bool showIcon;
     float oldDelay;
+    bool skipped = false;
 
     // read only property for the finished flag
     [HideInInspector] public bool finished {get; private set;} = false;
@@ -50,7 +51,7 @@ public class TextBox : MonoBehaviour {
             if (!character.Equals('\\')) textBoxToUse.text += character;
             // play a sound when a character other than a space is added
             if (!character.Equals(' ') && !character.Equals('\n') && !character.Equals('\\')) {
-                AudioManager.PlaySound(voiceClip);
+                if (!skipped) AudioManager.PlaySound(voiceClip);
             }
             // set the finished flag and return if message is finished
             if (messageProgress == message.Length) {
@@ -66,6 +67,11 @@ public class TextBox : MonoBehaviour {
             // wait a delay before adding the next letter
             yield return new WaitForSeconds(delayBetweenLetters);
         }
+    }
+
+    public void Skip() {
+        delayBetweenLetters = 0;
+        skipped = true;
     }
 
     public void SetData(TextSpawner.TextBoxData newData) {
