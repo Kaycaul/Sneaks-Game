@@ -2856,6 +2856,555 @@ MonoBehaviour:
       message: lmao
       voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
       delayBetweenLetters: 0.05
+  - title: Kib Hi
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: You walk to the anvil store with sneaks.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: Brring! Brring!
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: HEY GUYSSSSS!!!!!!!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Shop Bell
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Hi Kib!!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: The store is empty, and the store owner Kib is busy cleaning his wares.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: f1e89f47812196e4c8a6ab3218aa0e8c, type: 3}
+      showIcon: 1
+      message: why does your shop bell sound exactly like the one at school
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: ef45c5ed6a9814141919148b6659d28b, type: 3}
+      showIcon: 1
+      message: Uhhh, I dunno?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: It just sounds like a normal bell to me.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 92afb9bc1a8b71f4ea1919f4a4535cf8, type: 3}
+      showIcon: 1
+      message: Do you have a problem with it SNEAKERS?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 42bb2bedd709db6469e0de93db0e1a4a, type: 3}
+      showIcon: 1
+      message: no i just think thats like such a worm thing for you to do
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 66464c640b0a7634cb10c3db892b100f, type: 3}
+      showIcon: 1
+      message: because you know
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
+      showIcon: 1
+      message: youre a silly little worm
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: As the two engage in meaningless banter, you browse the store.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (I should get sneaks a gift while I'm here... what would he like?)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (This anvil looks so heavy...)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: Kib stops arguing with sneaks and rushes over to you.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Hey!\ You seem interested in that very shiny and heavy anvil!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: That anvil weighs 84 terabytes!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: 'Oh!\ Y-\Yeah... this one looks nice.\
+
+        Do you... Uhmm.. Gift
+        wrap?'
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (sneaks is watching me... I hope he doesn't know it's for him..)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Sure I guess? Who's it for?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: You blush a little and try to hide your expression behind your hands.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Uhmmm... I don't.. I-\It's..
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 66464c640b0a7634cb10c3db892b100f, type: 3}
+      showIcon: 1
+      message: lol did you forget about mothers day too
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 8a4d798aa8445fc4893cfb39c931c9d4, type: 3}
+      showIcon: 1
+      message: i always get something the day after anyway, its funnier
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Oh my god...)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: The mothers day sale is still active you know!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: M-\Maybe I will get it then!!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Sure! Just tell me your credit card number when you're ready!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: Kib gets behind the counter and waits for you to make a selection.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.03
+  - title: Kib Store Start
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: What do you wanna buy?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Already Purchased
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: ef45c5ed6a9814141919148b6659d28b, type: 3}
+      showIcon: 1
+      message: You already bought that FOREHEAD!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Want anything else?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Buy Anvil
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: H-\Here's my credit card number!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Awesome!\ Are you forklift certified?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: '(Oh no..)\
+
+        (I have to be quiet, I don''t want sneaks to
+        know im not forklift certified..)'
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: uhm..\\ no..
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: ef45c5ed6a9814141919148b6659d28b, type: 3}
+      showIcon: 1
+      message: Hmmm
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Well, you can't drive your new anvil out of here with a forklift,
+        so just take this remote.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Huh?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Press the button to signal when you want your anvil, and I'll teleport
+        it to you!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: I'll wrap it for you in the meantime.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Oh! Thank you!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Maybe I can use this to surprise him..)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Buy Chalk
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (I can use this chalk to draw on the floor...)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Can I get some chalk?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Ohh, I get it now.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: You're planning a funny evil prank!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Just don't forget to draw a big red X to stand on.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: ef45c5ed6a9814141919148b6659d28b, type: 3}
+      showIcon: 1
+      message: Unless youre just planning to eat it like the last guy that came in
+        here..
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Buy Potion
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (What the hell is this? Why is he selling this?)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Buy my sinister potion!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: What?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Buy my sinister potion!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 29bdab598a556d34da14f0820f4d6dc4, type: 3}
+      showIcon: 1
+      message: the sinister potion..
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: The... what?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: d6c1aa745ed4b9d40a5e3958df4cc144, type: 3}
+      showIcon: 1
+      message: kib, isnt the sinister potion like
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: f1e89f47812196e4c8a6ab3218aa0e8c, type: 3}
+      showIcon: 1
+      message: forbidden
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 92afb9bc1a8b71f4ea1919f4a4535cf8, type: 3}
+      showIcon: 1
+      message: The Sinister Potion!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Okay... I'll take it, just please stop looking at me like that...
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Done Shopping
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: 'That''s uh, that''s all I need!!\
+
+        Thanks Kib!!'
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: Haha no problem buddy!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 42bb2bedd709db6469e0de93db0e1a4a, type: 3}
+      showIcon: 1
+      message: hey i like, gotta go right now
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 66464c640b0a7634cb10c3db892b100f, type: 3}
+      showIcon: 1
+      message: we can meet up later at my house
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 8a4d798aa8445fc4893cfb39c931c9d4, type: 3}
+      showIcon: 1
+      message: heres my number
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (His phone number?? This can't be happening...)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: fb91cecd6f946b44cac531512f8e1225, type: 3}
+      showIcon: 1
+      message: here :3
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 0
+      message: sneaks hands you a crumpled sticky note, with the number "7" written
+        on it.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Huh?)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: T-\This is your phone number..?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 66464c640b0a7634cb10c3db892b100f, type: 3}
+      showIcon: 1
+      message: yeah
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 42bb2bedd709db6469e0de93db0e1a4a, type: 3}
+      showIcon: 1
+      message: call me when youre ready to come over
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Uhh, okay?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 8aeacf52fc5205a408b00cd075324482, type: 3}
+      showIcon: 1
+      message: cya kibbers
+      voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: See you!!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 0
+      message: Brring! Brring!
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 0
+      message: sneaks leaves the store.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Follow Sneaks
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (I better follow him... This is my only chance!!)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Hopefully he doesn't see me..)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: I-\I'll go too! Thanks Kib!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: BYE!!!!!!!!!!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 0
+      message: You go outside and wait for sneaks to be stalking distance away from
+        you.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.05
+  - title: Talk To Kib
+    boxes:
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Oh my god.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: You totally like him don't you!
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: What! N-\No!!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 92afb9bc1a8b71f4ea1919f4a4535cf8, type: 3}
+      showIcon: 1
+      message: Uh huh
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: I just...
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Well before you two go kiss in a movie theater or whatever, I have
+        a question for you.
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: (Oh god.. This is so embarrassing..)
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: If you were walking down the street with sneaks, right
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: ef45c5ed6a9814141919148b6659d28b, type: 3}
+      showIcon: 1
+      message: But then this like really creepy old man approaches you
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: And he said "Hey, wanna buy some shoes?"
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: And then he like, held some really tiny shoes up to your face..
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: And gestured for you to give him money..
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Would you give him your money?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: .........\\what?
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Oh yeah, and in this hypothetical, you don't have any cash, BUT
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 1
+      message: You do have a glistening ruby gem in your pockets
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 26e6664aa79ae524ea7d1e01028676c0, type: 3}
+      showIcon: 1
+      message: Would you give it to him?
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Uhh... I don't know.
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: ef45c5ed6a9814141919148b6659d28b, type: 3}
+      showIcon: 1
+      message: ..........
+      voiceClip: {fileID: 8300000, guid: 64a3834d4e7192b44813bcdcca0d8ee0, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 428ffa7d27d390140b97e7a020056f9e, type: 3}
+      showIcon: 1
+      message: Sorry I really need to go, I'll come back later!
+      voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+      delayBetweenLetters: 0.05
+    - iconSprite: {fileID: 21300000, guid: 7952fa30a6f8f8242a9fbc5f0fbbdc06, type: 3}
+      showIcon: 0
+      message: You go outside and see that sneaks isn't too far away.
+      voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+      delayBetweenLetters: 0.05
   questionBoxDatas:
   - title: Say Hello
     message: 
@@ -2878,6 +3427,22 @@ MonoBehaviour:
     - Go to the anvil store
     voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
     delayBetweenLetters: 0.05
+  - title: Kib Store
+    message: 
+    choices:
+    - Buy the heavy anvil
+    - Buy red chalk
+    - Buy the Sinister Potion
+    - Exit
+    voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
+    delayBetweenLetters: 0.05
+  - title: Follow Him
+    message: Should I follow him?
+    choices:
+    - Follow him (sneakily)
+    - Stay for a bit and talk with Kib
+    voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
+    delayBetweenLetters: 0.05
   textBoxPrefab: {fileID: 2613522413159142648, guid: f97984d4d4bf55949bced6b38bc92a0a, type: 3}
   questionBoxPrefab: {fileID: 5052415627960986484, guid: 8a7e07b7f4a57ee46a4c4902eb896e5a, type: 3}
   outside1: {fileID: 21300000, guid: f2bb8eabbda04844ea94c704612d567e, type: 3}
@@ -2886,8 +3451,12 @@ MonoBehaviour:
   weirdUmbrellaCg: {fileID: 21300000, guid: afea78d35a234a842af4c6ee6b918688, type: 3}
   hellCg: {fileID: 21300000, guid: b1a38233826d0894a939faf9d6f19278, type: 3}
   sneaks: {fileID: 21300000, guid: 32f76b73e08a63c4e8472df2d3b589de, type: 3}
-  kibbers: {fileID: 21300000, guid: d37b21714b54ede469aec0507448244b, type: 3}
+  kibbers: {fileID: 21300000, guid: feb995ca2bfcb5a4a94edab959b10043, type: 3}
+  kibHappyCg: {fileID: 21300000, guid: cb29497b5d61dbd449b828dc1808193d, type: 3}
+  kibWtfCg: {fileID: 21300000, guid: 56fb047bb9366fd4aa289d5c4d45ca0c, type: 3}
+  kibShopBackground: {fileID: 21300000, guid: 503972491b5fb794892a98917c4cf23c, type: 3}
   outsideMusic: {fileID: 8300000, guid: dda01dd2889059744a6daee3e26d815d, type: 3}
+  shoppingMusic: {fileID: 8300000, guid: 0df6cdbc4c3596e4a8b68852da9cc84b, type: 3}
   rain: {fileID: 8300000, guid: 02b878c432ea8e644a98d27cb657a910, type: 3}
   crowd: {fileID: 8300000, guid: 9a4493380cda8064d91fde9582821a82, type: 3}
   cars: {fileID: 8300000, guid: 5626c9d419b4f1d4e90e294d8340ff9a, type: 3}
@@ -3373,7 +3942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354.0034, y: 224.6665}
+  m_AnchoredPosition: {x: -354.0034, y: 244.7}
   m_SizeDelta: {x: 53.494, y: 29.8948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707690935

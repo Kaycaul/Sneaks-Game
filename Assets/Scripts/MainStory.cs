@@ -8,8 +8,8 @@ public class MainStory : MonoBehaviour {
     [SerializeField] QuestionBox.QuestionBoxData[] questionBoxDatas;
     [SerializeField] GameObject textBoxPrefab;
     [SerializeField] GameObject questionBoxPrefab;
-    [SerializeField] Sprite outside1, outside2, umbrellaCg, weirdUmbrellaCg, hellCg, sneaks, kibbers;
-    [SerializeField] AudioClip outsideMusic;
+    [SerializeField] Sprite outside1, outside2, umbrellaCg, weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground;
+    [SerializeField] AudioClip outsideMusic, shoppingMusic;
     [SerializeField] AudioClip rain, crowd, cars, insideRain;
 
     TextSpawner[] textBoxes;
@@ -30,7 +30,8 @@ public class MainStory : MonoBehaviour {
             questionBoxes[i] = QuestionSpawner.CreateQuestionSpawner(questionBoxPrefab, questionBoxDatas[i]);
             questionBoxes[i].gameObject.transform.SetParent(transform);
         }
-        StartCoroutine(Story());
+        //StartCoroutine(Story());
+        StartCoroutine(Shopping());
     }
 
     TextSpawner GetSpawner(string title) {
@@ -95,7 +96,57 @@ public class MainStory : MonoBehaviour {
         yield return ShowQuestion("Choose Next Location");
         bool goToSneaksHouse = lastChoice == 0;
         yield return ShowConversation(goToSneaksHouse ? "Go Sneaks House" : "Go Shopping");
+        yield return goToSneaksHouse ? null : Shopping();
+    }
 
+    IEnumerator Shopping() {
+        yield return BackgroundManager.FadeOut();
+        BackgroundManager.HideCharacter();
+        AudioManager.StopAllAmbienceSources();
+        AudioManager.PlayAmbience(insideRain);
+        AudioManager.PlayMusic(shoppingMusic);
+        yield return BackgroundManager.FadeIn(kibShopBackground);
+        yield return ShowConversation("Kib Hi");
+        yield return BackgroundManager.SlideIn(kibbers);
+        yield return ShowConversation("Shop Bell");
+        yield return BackgroundManager.FadeOut();
+        BackgroundManager.HideCharacter();
+        yield return BackgroundManager.FadeIn(kibHappyCg);
+        bool shopping = true;
+        bool purchasedAnvil = false;
+        bool purchasedChalk = false;
+        bool purchasedPotion = false;
+        while (shopping) {
+            BackgroundManager.UpdateBackground(kibHappyCg);
+            yield return ShowConversation("Kib Store Start");
+            yield return ShowQuestion("Kib Store");
+            if (lastChoice == 0) {
+                if (purchasedAnvil) BackgroundManager.UpdateBackground(kibWtfCg);
+                yield return ShowConversation(purchasedAnvil ? "Already Purchased" : "Buy Anvil");
+                purchasedAnvil = true;
+            }
+            else if (lastChoice == 1) {
+                if (purchasedChalk) BackgroundManager.UpdateBackground(kibWtfCg);
+                yield return ShowConversation(purchasedChalk ? "Already Purchased" : "Buy Chalk");
+                purchasedChalk = true;
+            }
+            else if (lastChoice == 2) {
+                if (purchasedPotion) BackgroundManager.UpdateBackground(kibWtfCg);
+                yield return ShowConversation(purchasedPotion ? "Already Purchased" : "Buy Potion");
+                purchasedPotion = true;
+            }
+            else shopping = false;
+        }
+        yield return BackgroundManager.FadeOut();
+        yield return BackgroundManager.SlideIn(kibbers);
+        yield return BackgroundManager.FadeIn(kibShopBackground);
+        yield return ShowConversation("Done Shopping");
+        yield return ShowQuestion("Follow Him");
+        bool followSneaks = lastChoice == 0;
+        yield return ShowConversation(followSneaks ? "Follow Sneaks" : "Talk To Kib");
+        yield return BackgroundManager.FadeOut();
+        BackgroundManager.HideCharacter();
+        AudioManager.StopAllAmbienceSources();
     }
     
 }
