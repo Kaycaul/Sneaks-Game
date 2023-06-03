@@ -30,8 +30,8 @@ public class MainStory : MonoBehaviour {
             questionBoxes[i] = QuestionSpawner.CreateQuestionSpawner(questionBoxPrefab, questionBoxDatas[i]);
             questionBoxes[i].gameObject.transform.SetParent(transform);
         }
-        //StartCoroutine(Story());
-        StartCoroutine(Shopping());
+        StartCoroutine(Story());
+        //StartCoroutine(Shopping());
     }
 
     TextSpawner GetSpawner(string title) {

@@ -37,7 +37,6 @@ public class BackgroundManager : MonoBehaviour {
     }
 
     public static IEnumerator FadeOut() {
-        Debug.Log("Fading out");
         yield return instance.FadeBetween(Color.clear, Color.black);
     }
 
