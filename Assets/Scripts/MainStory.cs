@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainStory : MonoBehaviour {
 
@@ -8,12 +10,17 @@ public class MainStory : MonoBehaviour {
     [SerializeField] QuestionBox.QuestionBoxData[] questionBoxDatas;
     [SerializeField] GameObject textBoxPrefab;
     [SerializeField] GameObject questionBoxPrefab;
-    [SerializeField] Sprite outside1, outside2, umbrellaCg, weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground;
-    [SerializeField] AudioClip outsideMusic, shoppingMusic;
+    [SerializeField] Sprite outside1, outside2, umbrellaCg, weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground, sneaksHouse, sneaksHouseEvil;
+    [SerializeField] AudioClip outsideMusic, shoppingMusic, houseMusic, hellMusic;
     [SerializeField] AudioClip rain, crowd, cars, insideRain;
 
     TextSpawner[] textBoxes;
     QuestionSpawner[] questionBoxes;
+
+    bool purchasedAnvil = false;
+    bool purchasedChalk = false;
+    bool purchasedPotion = false;
+    bool skippedShopping;
 
     int lastChoice = -1;
     private void Start() {
@@ -60,6 +67,7 @@ public class MainStory : MonoBehaviour {
     }
 
     IEnumerator Story() {
+
         AudioManager.PlayMusic(outsideMusic);
         AmbienceSource crowdSource = AudioManager.PlayAmbience(crowd);
         AmbienceSource insideRainSource = AudioManager.PlayAmbience(insideRain);
@@ -96,7 +104,9 @@ public class MainStory : MonoBehaviour {
         yield return ShowQuestion("Choose Next Location");
         bool goToSneaksHouse = lastChoice == 0;
         yield return ShowConversation(goToSneaksHouse ? "Go Sneaks House" : "Go Shopping");
-        yield return goToSneaksHouse ? null : Shopping();
+        skippedShopping = goToSneaksHouse;
+        AudioManager.StopAllAmbienceSources();
+        yield return goToSneaksHouse ? SneaksHouse() : Shopping();
     }
 
     IEnumerator Shopping() {
@@ -113,9 +123,6 @@ public class MainStory : MonoBehaviour {
         BackgroundManager.HideCharacter();
         yield return BackgroundManager.FadeIn(kibHappyCg);
         bool shopping = true;
-        bool purchasedAnvil = false;
-        bool purchasedChalk = false;
-        bool purchasedPotion = false;
         while (shopping) {
             BackgroundManager.UpdateBackground(kibHappyCg);
             yield return ShowConversation("Kib Store Start");
@@ -144,9 +151,61 @@ public class MainStory : MonoBehaviour {
         yield return ShowQuestion("Follow Him");
         bool followSneaks = lastChoice == 0;
         yield return ShowConversation(followSneaks ? "Follow Sneaks" : "Talk To Kib");
-        yield return BackgroundManager.FadeOut();
+        //yield return BackgroundManager.FadeOut(); // outside sneaks house fades out
         BackgroundManager.HideCharacter();
         AudioManager.StopAllAmbienceSources();
+        yield return SneaksHouse();
     }
-    
+
+    IEnumerator SneaksHouse() {
+        yield return BackgroundManager.FadeOut();
+        AudioManager.PlayAmbience(rain);
+        AudioManager.PlayMusic(houseMusic);
+        yield return BackgroundManager.SlideIn(sneaks);
+        yield return ShowConversation("Arrive At House");
+        yield return BackgroundManager.FadeIn(skippedShopping ? sneaksHouseEvil : sneaksHouse);
+        AudioManager.StopAllAmbienceSources();
+        AudioManager.PlayAmbience(insideRain);
+        if (skippedShopping) {
+            GetSpawner("Inside House").textBoxDatas[0].message = "Inside the house, it smells like brimstone and burning plastic.";
+        }
+        yield return ShowConversation("Inside House");
+        yield return BackgroundManager.SlideOut();
+        yield return ShowConversation("Waiting In House");
+        bool wentDownTrapdoor = false;
+        if (skippedShopping) {
+            yield return ShowConversation("Trapdoor");
+            yield return ShowQuestion("Closer Look");
+            if (lastChoice == 1) goto Break;
+            AudioManager.StopMusic();
+            yield return ShowQuestion("Really Closer Look");
+            if (lastChoice == 1) goto Break;
+            yield return ShowQuestion("Really Really Closer Look");
+            if (lastChoice == 1) goto Break;
+            yield return ShowQuestion("Really Really Really Closer Look");
+            if (lastChoice == 1) goto Break;
+            wentDownTrapdoor = true;
+            Break:;
+        }
+        if (wentDownTrapdoor) {
+            AudioManager.StopAllAmbienceSources();
+            yield return BackgroundManager.FadeOut();
+            yield return ShowConversation("Hell Ending");
+            AudioManager.PlayMusic(hellMusic);
+            yield return BackgroundManager.FadeIn(hellCg);
+            yield return ShowConversation("Hell Ending 2");
+            AudioManager.StopAllAmbienceSources();
+            // hide the character and swtich scenes
+            BackgroundManager.HideCharacter();
+            SceneManager.LoadScene("Main Menu");
+            yield break;
+        } else {
+            yield return SneaksRoom();
+        }
+    }
+
+    IEnumerator SneaksRoom() {
+        // go to his room and either get trapped forever because its so cool, or crush yourself with an anvil
+        throw new NotImplementedException();
+    }
 }

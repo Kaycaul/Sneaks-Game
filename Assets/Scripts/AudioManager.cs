@@ -89,12 +89,12 @@ public class AudioManager : MonoBehaviour {
     }
 
     // fade between two audio sources
-    static IEnumerator CrossFade(float duration, AudioSource source1, AudioSource source2, float maxVolume) {
+    static IEnumerator CrossFade(float duration, AudioSource sourceTo, AudioSource sourceFrom, float maxVolume) {
         float percent = 0;
         while (percent < 1) {
             percent += Time.deltaTime / duration;
-            source1.volume = Mathf.Lerp(0, maxVolume, percent);
-            source2.volume = Mathf.Lerp(maxVolume, 0, percent);
+            if (sourceTo is not null) sourceTo.volume = Mathf.Lerp(0, maxVolume, percent);
+            if (sourceFrom is not null) sourceFrom.volume = Mathf.Lerp(maxVolume, 0, percent);
             yield return null;
         }
     }
@@ -134,5 +134,10 @@ public class AudioManager : MonoBehaviour {
         foreach (AmbienceSource ambienceSource in FindObjectsOfType<AmbienceSource>()) {
             ambienceSource.StopAmbience();
         }
+    }
+
+    public static void StopMusic() {
+        instance.StartCoroutine(CrossFade(1, null, musicSources[activeMusicSourceIndex], musicVolume * masterVolume));
+        musicSources[activeMusicSourceIndex].clip = null; // did this in case it tries to fade out later when the other source fades in idk hopefully it doesnt break
     }
 }
