@@ -10,9 +10,12 @@ public class MainStory : MonoBehaviour {
     [SerializeField] QuestionBox.QuestionBoxData[] questionBoxDatas;
     [SerializeField] GameObject textBoxPrefab;
     [SerializeField] GameObject questionBoxPrefab;
-    [SerializeField] Sprite outside1, outside2, umbrellaCg, weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground, sneaksHouse, sneaksHouseEvil;
+    [SerializeField] Sprite outside1, outside2, umbrellaCg, 
+    weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground, 
+    sneaksHouse, sneaksHouseEvil, sneaksRoom, sneaksRoomCg;
     [SerializeField] AudioClip outsideMusic, shoppingMusic, houseMusic, hellMusic;
     [SerializeField] AudioClip rain, crowd, cars, insideRain;
+    [SerializeField] AudioClip metalPipe;
 
     TextSpawner[] textBoxes;
     QuestionSpawner[] questionBoxes;
@@ -106,11 +109,11 @@ public class MainStory : MonoBehaviour {
         yield return ShowConversation(goToSneaksHouse ? "Go Sneaks House" : "Go Shopping");
         skippedShopping = goToSneaksHouse;
         AudioManager.StopAllAmbienceSources();
+        yield return BackgroundManager.FadeOut();
         yield return goToSneaksHouse ? SneaksHouse() : Shopping();
     }
 
     IEnumerator Shopping() {
-        yield return BackgroundManager.FadeOut();
         BackgroundManager.HideCharacter();
         AudioManager.StopAllAmbienceSources();
         AudioManager.PlayAmbience(insideRain);
@@ -151,6 +154,8 @@ public class MainStory : MonoBehaviour {
         yield return ShowQuestion("Follow Him");
         bool followSneaks = lastChoice == 0;
         yield return ShowConversation(followSneaks ? "Follow Sneaks" : "Talk To Kib");
+        yield return BackgroundManager.FadeOut();
+        yield return ShowConversation("Call Sneaks");
         //yield return BackgroundManager.FadeOut(); // outside sneaks house fades out
         BackgroundManager.HideCharacter();
         AudioManager.StopAllAmbienceSources();
@@ -158,7 +163,6 @@ public class MainStory : MonoBehaviour {
     }
 
     IEnumerator SneaksHouse() {
-        yield return BackgroundManager.FadeOut();
         AudioManager.PlayAmbience(rain);
         AudioManager.PlayMusic(houseMusic);
         yield return BackgroundManager.SlideIn(sneaks);
@@ -206,6 +210,31 @@ public class MainStory : MonoBehaviour {
 
     IEnumerator SneaksRoom() {
         // go to his room and either get trapped forever because its so cool, or crush yourself with an anvil
-        throw new NotImplementedException();
+        yield return BackgroundManager.SlideIn(sneaks);
+        yield return ShowConversation("Go Upstairs");
+        yield return BackgroundManager.FadeOut();
+        yield return ShowConversation("Waiting Outside Room");
+        yield return ShowQuestion(purchasedAnvil && purchasedChalk ? "Peek Anvil" : "Peek");
+        if (lastChoice == 2) {
+            // only possible from peek anvil variant
+            // player crushes themself and the game ends
+            yield return ShowConversation("Anvil Trap");
+            yield return BackgroundManager.FadeIn(sneaksRoom);
+            yield return ShowConversation("Anvil Trap 2");
+            AudioManager.PlaySound(metalPipe);
+            yield return ShowConversation("Anvil Trap 3");
+            AudioManager.PlaySound(metalPipe);
+            yield return BackgroundManager.FadeOut();
+            BackgroundManager.HideCharacter();
+            yield return ShowConversation("Anvil Trap 4");
+            SceneManager.LoadScene("Main Menu");
+            goto Break;
+        }
+        yield return ShowConversation(lastChoice == 0 ? "Peek" : "Dont Peek");
+        yield return ShowConversation("Sneaks Ready");
+        BackgroundManager.HideCharacter();
+        yield return BackgroundManager.FadeIn(sneaksRoomCg);
+        yield return ShowConversation("Miku Room");
+        Break:;
     }
 }
