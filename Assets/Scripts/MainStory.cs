@@ -177,13 +177,13 @@ public class MainStory : MonoBehaviour {
             yield return ShowConversation("Trapdoor");
             yield return ShowQuestion("Closer Look");
             if (lastChoice == 1) goto Break;
-            AudioManager.StopMusic();
             yield return ShowQuestion("Really Closer Look");
             if (lastChoice == 1) goto Break;
             yield return ShowQuestion("Really Really Closer Look");
             if (lastChoice == 1) goto Break;
             yield return ShowQuestion("Really Really Really Closer Look");
             if (lastChoice == 1) goto Break;
+            AudioManager.StopMusic();
             wentDownTrapdoor = true;
             Break:;
         }

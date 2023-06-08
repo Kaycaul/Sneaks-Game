@@ -54,7 +54,7 @@ public class QuestionBox : MonoBehaviour {
         while (!finished) {
 
             // stop when the player makes a choice
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X)) {
                 if (OnChoiceSelected != null) OnChoiceSelected(currentChoice);
                 OnChoiceSelected = null;
                 finished = true;

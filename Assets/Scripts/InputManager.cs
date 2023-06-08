@@ -21,7 +21,10 @@ public class InputManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) OnNextTextbox?.Invoke();
         if (Input.GetKeyDown(KeyCode.Escape)) OnPause?.Invoke();
+        if (Input.GetKeyDown(KeyCode.Space) ||
+        Input.GetKeyDown(KeyCode.Z) ||
+        Input.GetKeyDown(KeyCode.X)) 
+        OnNextTextbox?.Invoke();
     }
 }
