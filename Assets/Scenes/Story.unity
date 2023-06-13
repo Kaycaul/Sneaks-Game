@@ -3845,6 +3845,8 @@ MonoBehaviour:
       message: Slowly...
       voiceClip: {fileID: 8300000, guid: 71cf6306b686f524b80f8595aa579a47, type: 3}
       delayBetweenLetters: 0.04
+  - title: Peek 2
+    boxes:
     - iconSprite: {fileID: 21300000, guid: f73b4d3c2cc1c554aaf3271622261a5f, type: 3}
       showIcon: 1
       message: '*extremely loud and obvious creaking noises*'
@@ -3860,6 +3862,8 @@ MonoBehaviour:
       message: ...................................
       voiceClip: {fileID: 8300000, guid: 9c07f6b70b7a22947ac2fd21ce43d14b, type: 3}
       delayBetweenLetters: 0.05
+  - title: Peek 3
+    boxes:
     - iconSprite: {fileID: 21300000, guid: 37d9bacf744ce6b4587fc10f11cf451e, type: 3}
       showIcon: 1
       message: hey
@@ -3870,6 +3874,8 @@ MonoBehaviour:
       message: ..............................
       voiceClip: {fileID: 8300000, guid: 01fdff0b345e76844af342e62ee420d6, type: 3}
       delayBetweenLetters: 0.05
+  - title: Peek 4
+    boxes:
     - iconSprite: {fileID: 21300000, guid: 8aeacf52fc5205a408b00cd075324482, type: 3}
       showIcon: 0
       message: You slowly close the creaky door, but sneaks doesn't break eye contact.
@@ -4206,6 +4212,8 @@ MonoBehaviour:
   sneaksHouseEvil: {fileID: 21300000, guid: bc1c14c80be08f2488210826c75c8a9b, type: 3}
   sneaksRoom: {fileID: 21300000, guid: a69b96bd3c3675744b2d7f8cbfbfb8b6, type: 3}
   sneaksRoomCg: {fileID: 21300000, guid: 2bd0216c7e70af843847b026fca7c718, type: 3}
+  peek1: {fileID: 0}
+  peek2: {fileID: 0}
   outsideMusic: {fileID: 8300000, guid: dda01dd2889059744a6daee3e26d815d, type: 3}
   shoppingMusic: {fileID: 8300000, guid: 0df6cdbc4c3596e4a8b68852da9cc84b, type: 3}
   houseMusic: {fileID: 8300000, guid: de31a25e8e810634b8e57a1a8318e599, type: 3}

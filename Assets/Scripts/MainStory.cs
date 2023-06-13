@@ -12,7 +12,7 @@ public class MainStory : MonoBehaviour {
     [SerializeField] GameObject questionBoxPrefab;
     [SerializeField] Sprite outside1, outside2, umbrellaCg, 
     weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground, 
-    sneaksHouse, sneaksHouseEvil, sneaksRoom, sneaksRoomCg;
+    sneaksHouse, sneaksHouseEvil, sneaksRoom, sneaksRoomCg, peek1, peek2;
     [SerializeField] AudioClip outsideMusic, shoppingMusic, houseMusic, hellMusic;
     [SerializeField] AudioClip rain, crowd, cars, insideRain;
     [SerializeField] AudioClip metalPipe;
@@ -230,9 +230,19 @@ public class MainStory : MonoBehaviour {
             SceneManager.LoadScene("Main Menu");
             goto Break;
         }
-        yield return ShowConversation(lastChoice == 0 ? "Peek" : "Dont Peek");
-        yield return ShowConversation("Sneaks Ready");
         BackgroundManager.HideCharacter();
+        if (lastChoice == 0) {
+            yield return ShowConversation("Peek");
+            yield return BackgroundManager.FadeIn(peek1);
+            yield return ShowConversation("Peek 2");
+            BackgroundManager.UpdateBackground(peek2);
+            yield return ShowConversation("Peek 3");
+            yield return BackgroundManager.FadeOut();
+            yield return ShowConversation("Peek 4");
+        } else {
+            yield return ShowConversation("Dont Peek");
+        }
+        yield return ShowConversation("Sneaks Ready");
         yield return BackgroundManager.FadeIn(sneaksRoomCg);
         yield return ShowConversation("Miku Room");
         Break:;
