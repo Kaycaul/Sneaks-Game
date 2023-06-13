@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour {
 
     public static event System.Action<float> OnAmbienceVolumeChanged;
 
+    static bool musicStopped = false;
+
     // update the volume of sources, should be called by ui
     public static void SetMasterVolume(float volume) {
         masterVolume = volume;
@@ -55,6 +57,7 @@ public class AudioManager : MonoBehaviour {
 
     // starts a new song and stops the previous one, by fading it out
     public static void PlayMusic(AudioClip clip, float fadeDuration = 1) {
+        musicStopped = false;
         if (clip == null) {
             Debug.LogError("Tried to play null music clip!");
             return;
@@ -92,11 +95,14 @@ public class AudioManager : MonoBehaviour {
     static IEnumerator CrossFade(float duration, AudioSource sourceTo, AudioSource sourceFrom, float maxVolume) {
         float percent = 0;
         while (percent < 1) {
-            percent += Time.deltaTime / duration;
+            percent += Time.unscaledDeltaTime / duration;
             if (sourceTo is not null) sourceTo.volume = Mathf.Lerp(0, maxVolume, percent);
             if (sourceFrom is not null) sourceFrom.volume = Mathf.Lerp(maxVolume, 0, percent);
             yield return null;
         }
+        // stupid hack
+        if (musicStopped) musicSources[activeMusicSourceIndex].volume = 0;
+        else SetMusicVolume(musicVolume);
     }
 
     private void Awake() {
@@ -137,6 +143,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     public static void StopMusic() {
+        musicStopped = true;
         instance.StartCoroutine(CrossFade(1, null, musicSources[activeMusicSourceIndex], musicVolume * masterVolume));
         musicSources[activeMusicSourceIndex].clip = null; // did this in case it tries to fade out later when the other source fades in idk hopefully it doesnt break
     }
