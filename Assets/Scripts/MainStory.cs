@@ -228,7 +228,7 @@ public class MainStory : MonoBehaviour {
             BackgroundManager.HideCharacter();
             yield return ShowConversation("Anvil Trap 4");
             SceneManager.LoadScene("Main Menu");
-            goto Break;
+            yield break;
         }
         BackgroundManager.HideCharacter();
         if (lastChoice == 0) {
@@ -245,6 +245,18 @@ public class MainStory : MonoBehaviour {
         yield return ShowConversation("Sneaks Ready");
         yield return BackgroundManager.FadeIn(sneaksRoomCg);
         yield return ShowConversation("Miku Room");
-        Break:;
+        yield return BackgroundManager.FadeOut();
+        AudioManager.StopMusic();
+        AudioManager.StopAllAmbienceSources();
+        yield return ShowConversation("Miku Room 2");
+        yield return ShowConversation("Miku Room 3");
+        yield return new WaitForSeconds(2);
+        yield return ShowConversation("Miku Room 4");
+        yield return new WaitForSeconds(2);
+        if (purchasedAnvil) {
+            yield return ShowConversation("Kib Ending");
+            yield return new WaitForSeconds(3);
+        }
+        SceneManager.LoadScene("Main Menu");
     }
 }
