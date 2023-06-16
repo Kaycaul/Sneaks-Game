@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] Color fadeColor1, fadeColor2;
     [SerializeField] Sprite guy;
 
+    bool started = false;
+
     private void Start() {
         StartCoroutine(BackgroundManager.FadeIn());
         AudioManager.PlayMusic(menuMusic);
@@ -41,6 +43,9 @@ public class MainMenu : MonoBehaviour {
     }
 
     IEnumerator StartGame() {
+        if (started) yield break;
+        started = true;
+        yield return new WaitUntil(() => !BackgroundManager.IsFading());
         yield return BackgroundManager.FadeOut();
         // switch scene to main story
         SceneManager.LoadScene("Story");

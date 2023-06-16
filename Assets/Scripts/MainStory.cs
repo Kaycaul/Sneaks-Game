@@ -12,7 +12,7 @@ public class MainStory : MonoBehaviour {
     [SerializeField] GameObject questionBoxPrefab;
     [SerializeField] Sprite outside1, outside2, umbrellaCg, 
     weirdUmbrellaCg, hellCg, sneaks, kibbers, kibHappyCg, kibWtfCg, kibShopBackground, 
-    sneaksHouse, sneaksHouseEvil, sneaksRoom, sneaksRoomCg, peek1, peek2;
+    sneaksHouse, sneaksHouseEvil, sneaksRoom, sneaksRoomCg, peek1, peek2, black;
     [SerializeField] AudioClip outsideMusic, shoppingMusic, houseMusic, hellMusic;
     [SerializeField] AudioClip rain, crowd, cars, insideRain;
     [SerializeField] AudioClip metalPipe;
@@ -70,7 +70,8 @@ public class MainStory : MonoBehaviour {
     }
 
     IEnumerator Story() {
-
+        BackgroundManager.UpdateBackground(black);
+        yield return BackgroundManager.FadeOut();
         AudioManager.PlayMusic(outsideMusic);
         AmbienceSource crowdSource = AudioManager.PlayAmbience(crowd);
         AmbienceSource insideRainSource = AudioManager.PlayAmbience(insideRain);
@@ -201,7 +202,7 @@ public class MainStory : MonoBehaviour {
             AudioManager.StopAllAmbienceSources();
             // hide the character and swtich scenes
             BackgroundManager.HideCharacter();
-            SceneManager.LoadScene("Main Menu");
+            yield return Exit();
             yield break;
         } else {
             yield return SneaksRoom();
@@ -227,7 +228,7 @@ public class MainStory : MonoBehaviour {
             yield return BackgroundManager.FadeOut();
             BackgroundManager.HideCharacter();
             yield return ShowConversation("Anvil Trap 4");
-            SceneManager.LoadScene("Main Menu");
+            yield return Exit();
             yield break;
         }
         BackgroundManager.HideCharacter();
@@ -257,6 +258,11 @@ public class MainStory : MonoBehaviour {
             yield return ShowConversation("Kib Ending");
             yield return new WaitForSeconds(3);
         }
+        yield return Exit();
+    }
+
+    IEnumerator Exit() {
+        yield return new WaitUntil(() => !BackgroundManager.IsFading());
         SceneManager.LoadScene("Main Menu");
     }
 }

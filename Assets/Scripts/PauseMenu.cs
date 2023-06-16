@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour {
         AudioManager.StopAllAmbienceSources();
         // hide the character and swtich scenes
         BackgroundManager.HideCharacter();
-        SceneManager.LoadScene("Main Menu");
+        StartCoroutine(Exit());
     }
 
     // called by inputmanager when esc pressed
@@ -60,6 +60,11 @@ public class PauseMenu : MonoBehaviour {
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1;
+    }
+
+    IEnumerator Exit() {
+        yield return new WaitUntil(() => !BackgroundManager.IsFading());
+        SceneManager.LoadScene("Main Menu");
     }
 
 }
